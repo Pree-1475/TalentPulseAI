@@ -129,8 +129,9 @@ export async function getMongoDb(): Promise<Db | null> {
 
   try {
     mongoClient = new MongoClient(uri, {
-      connectTimeoutMS: 3000,
-      serverSelectionTimeoutMS: 3000,
+      connectTimeoutMS: 8000,
+      serverSelectionTimeoutMS: 8000,
+      tlsAllowInvalidCertificates: true,
     });
     await mongoClient.connect();
     mongoDb = mongoClient.db();

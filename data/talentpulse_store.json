@@ -6,9 +6,10 @@
       "sourceName": "Stripe Careers",
       "sourceType": "Financial Services",
       "createdDate": "2026-01-15T09:00:00Z",
-      "lastCrawlDate": "2026-11-20T14:30:00Z",
+      "lastCrawlDate": "2026-11-21T15:30:27.122Z",
       "crawlStatus": "completed",
-      "jobCount": 12
+      "jobCount": 14,
+      "errorMessage": "Notice: Live Firecrawl API encountered \"DNS resolution failed for hostname \"careers.stripe.com\". This means the domain name could not be translated to an IP address. Possible causes: (1) The domain name is misspelled (check for typos), (2) The domain does not exist or has expired, (3) The DNS servers are temporarily unavailable, or (4) The domain was recently registered and DNS has not propagated yet. Please verify the URL is correct and the website exists.\". Extracted via fallback parser."
     },
     {
       "id": "src-2",
@@ -16,7 +17,7 @@
       "sourceName": "Anthropic AI",
       "sourceType": "Technology",
       "createdDate": "2026-02-10T10:00:00Z",
-      "lastCrawlDate": "2026-11-21T08:15:00Z",
+      "lastCrawlDate": "2026-11-21T15:30:28.755Z",
       "crawlStatus": "completed",
       "jobCount": 14
     },
@@ -26,9 +27,10 @@
       "sourceName": "McKinsey Digital",
       "sourceType": "Consulting",
       "createdDate": "2026-03-01T11:00:00Z",
-      "lastCrawlDate": "2026-11-19T16:45:00Z",
+      "lastCrawlDate": "2026-11-21T15:30:32.032Z",
       "crawlStatus": "completed",
-      "jobCount": 9
+      "jobCount": 10,
+      "errorMessage": "Notice: Live Firecrawl API encountered \"Firecrawl API error (500): {\"success\":false,\"code\":\"SCRAPE_SITE_ERROR\",\"error\":\"The URL failed to load in the browser with error code \\\"ERR_TUNNEL_CONNECTION_FAILED\\\". Firecrawl encountered an internal proxy error while establishing the tunnel. This is an internal Firecrawl proxy error. Please retry or contact support.\",\"warnings\":[\"/v1/scrape is deprecated. Use /v2/scrape instead. See https://docs.firecrawl.dev/migrate-to-v2.\"],\"replacement\":\"/v2/scrape\"}\". Extracted via fallback parser."
     },
     {
       "id": "src-4",
@@ -36,9 +38,9 @@
       "sourceName": "Optum Health & Tech",
       "sourceType": "Healthcare",
       "createdDate": "2026-04-12T08:30:00Z",
-      "lastCrawlDate": "2026-11-18T11:20:00Z",
+      "lastCrawlDate": "2026-11-21T15:30:37.390Z",
       "crawlStatus": "completed",
-      "jobCount": 8
+      "jobCount": 10
     },
     {
       "id": "src-5",
@@ -46,12 +48,124 @@
       "sourceName": "Shopify Engineering",
       "sourceType": "E-commerce",
       "createdDate": "2026-05-20T13:00:00Z",
-      "lastCrawlDate": "2026-11-20T18:00:00Z",
+      "lastCrawlDate": "2026-11-21T15:30:39.432Z",
       "crawlStatus": "completed",
-      "jobCount": 11
+      "jobCount": 12
     }
   ],
   "jobs": [
+    {
+      "id": "job-crawled-1795275038538-1",
+      "jobTitle": "Shopify Technical Role",
+      "company": "Shopify",
+      "description": "# 404\n\nSomething’s missing around here. Could be you.\n\n[Back to careers](https://www.shopify.com/careers)",
+      "location": "Global / Remote",
+      "industry": "E-commerce",
+      "sourceUrl": "https://www.shopify.com/careers/engineering",
+      "sourceId": "src-5",
+      "postedDate": "2026-11-21T15:30:38.538Z",
+      "crawledDate": "2026-11-21T15:30:38.538Z",
+      "contentHash": "fcaa4f683c7dbcf7a91a0cdf33c41aa9fc855a8a72e6dfed7581cb5605fd8848",
+      "_id": "6b01b91e9ae6db4a7626321b"
+    },
+    {
+      "id": "job-crawled-1795275034893-2",
+      "jobTitle": "Workday is currently unavailable.",
+      "company": "Optum",
+      "description": "## Workday is currently unavailable.\n\n![](https://community.workday.com/themes/custom/outage_page/images/tools.svg)\n\nWe are experiencing a service interruption.\n\nYour service will be restored as quickly as possible.\n\nWe apologize for the inconvenience. If you are a Workday customer and require additional assistance please contact the Workday Administrator within your organization. Otherwise, please check back later.",
+      "location": "Remote / Hybrid",
+      "industry": "Healthcare",
+      "sourceUrl": "https://optum.wd1.myworkdayjobs.com/Careers",
+      "sourceId": "src-4",
+      "postedDate": "2026-11-21T15:30:34.893Z",
+      "crawledDate": "2026-11-21T15:30:34.893Z",
+      "contentHash": "6f2317d6aed967a64fe2f0e3ba81ae3c042f7995b94cc7ba413d6beb8d5ca5c9",
+      "_id": "6b01b91a9ae6db4a7626321a"
+    },
+    {
+      "id": "job-crawled-1795275034893-1",
+      "jobTitle": "English",
+      "company": "Optum",
+      "description": "English\n\n- English\n- Arabic\n- Chinese, Simplified\n- Chinese, Traditional\n- Czech\n- Dutch\n- Finnish\n- Français du Canada\n- French\n- Spanish\n- German\n- Hebrew\n- Hungarian\n- Indonesian\n- Italian\n- Japanese\n- Korean\n- Norwegian Bokmål\n- Polish\n- Portuguese, Portugal\n- Romanian\n- Russian\n- Swedish\n- Thai\n- Turkish\n- Vietnamese",
+      "location": "Remote / Hybrid",
+      "industry": "Healthcare",
+      "sourceUrl": "https://optum.wd1.myworkdayjobs.com/Careers",
+      "sourceId": "src-4",
+      "postedDate": "2026-11-21T15:30:34.893Z",
+      "crawledDate": "2026-11-21T15:30:34.893Z",
+      "contentHash": "194634e5c3a99f43f08fb5a5a8889d05210240766d90ad11c2bae3ec1244111e",
+      "_id": "6b01b91a9ae6db4a76263219"
+    },
+    {
+      "id": "job-crawled-1795275025106-2",
+      "jobTitle": "AI Research & Engineering",
+      "company": "Boards",
+      "description": "### AI Research & Engineering\n\n| Job |\n| --- |\n| [Anthropic Fellows Program, AI Safety & Security\\<br>\\<br>London, UK; Ontario, CAN; Remote-Friendly, United States; San Francisco, CA](https://job-boards.greenhouse.io/anthropic/jobs/5183044008) |\n| [Anthropic Fellows Program, ML Systems & Reinforcement Learning\\<br>\\<br>London, UK; Ontario, CAN; Remote-Friendly, United States; San Francisco, CA](https://job-boards.greenhouse.io/anthropic/jobs/5183051008) |\n| [Anthropic Fellows Program, The Anthropic Institute (Economics & Policy)\\<br>\\<br>London, UK; Ontario, CAN; Remote-Friendly, United States; San Francisco, CA](https://job-boards.greenhouse.io/anthropic/jobs/5183053008) |\n| [Anthropic Research Resident\\<br>\\<br>San Francisco, CA \\| New York City, NY](https://job-boards.greenhouse.io/anthropic/jobs/5438311008) |\n| [Anthropic Research Resident\\<br>\\<br>London, UK](https://job-boards.greenhouse.io/anthropic/jobs/5439169008) |\n| [Applied Scientist, Engineering\\<br>\\<br>San Francisco, CA](https://job-boards.greenhouse.io/anthropic/jobs/5468939008) |\n| [CMC & Manufacturing Lead, Life Sciences\\<br>\\<br>Remote-Friendly, United States](https://job-boards.greenhouse.io/anthropic/jobs/5481396008) |\n| [Engineering Manager, Research Data Platform\\<br>\\<br>San Francisco, CA \\| New York City, NY](https://job-boards.greenhouse.io/anthropic/jobs/5297059008) |\n| [Engineering Manager, Research Productivity\\<br>\\<br>San Francisco, CA \\| New York City, NY](https://job-boards.greenhouse.io/anthropic/jobs/5223093008) |\n| [Engineering Manager, Search\\<br>\\<br>San Francisco, CA \\| New York City, NY](https://job-boards.greenhouse.io/anthropic/jobs/5371065008) |\n| [\\[Expression of Interest\\] Research Engineer / Scientist, Alignment - London\\<br>\\<br>London, UK](https://job-boards.greenhouse.io/anthropic/jobs/4610158008) |\n| [\\[Expression of Interest\\] Research Manager, Interpretability\\<br>\\<br>San Francisco, CA](https://job-boards.greenhouse.io/anthropic/jobs/4980436008) |\n| [Machine Learning Infrastructure Engineer, Safeguards Research\\<br>\\<br>San Francisco, CA \\| New York City, NY](https://job-boards.greenhouse.io/anthropic/jobs/5364804008) |\n| [ML/Research Engineer, Safeguards\\<br>\\<br>San Francisco, CA \\| New York City, NY](https://job-boards.greenhouse.io/anthropic/jobs/4949336008) |\n| [Performance Engineer\\<br>\\<br>San Francisco, CA \\| New York City, NY \\| Seattle, WA](https://job-boards.greenhouse.io/anthropic/jobs/4020350008) |\n| [Performance Engineer, Inference Systems\\",
+      "location": "Remote / Hybrid",
+      "industry": "Technology",
+      "sourceUrl": "https://boards.greenhouse.io/anthropic",
+      "sourceId": "src-2",
+      "postedDate": "2026-11-21T15:30:25.105Z",
+      "crawledDate": "2026-11-21T15:30:25.105Z",
+      "contentHash": "d793c36beea192c1ac69de42d389453b094562817a41d7a1bcf286aa2312f61a",
+      "_id": "6b01b9119ae6db4a76263218"
+    },
+    {
+      "id": "job-crawled-1795275025106-1",
+      "jobTitle": "Open Roles",
+      "company": "Boards",
+      "description": "# Open Roles\n\nCreate a Job Alert\n\nLevel-up your career by having opportunities at Anthropic sent directly to your inbox.\n\n[Create alert](https://my.greenhouse.io/users/sign_in?job_board=anthropic&source=job_alert_board)\n\nSearch\n\nDepartment\n\nSelect...\n\nOffice\n\nSelect...\n\n## 635 jobs",
+      "location": "Remote / Hybrid",
+      "industry": "Technology",
+      "sourceUrl": "https://boards.greenhouse.io/anthropic",
+      "sourceId": "src-2",
+      "postedDate": "2026-11-21T15:30:25.105Z",
+      "crawledDate": "2026-11-21T15:30:25.105Z",
+      "contentHash": "3d4c6be10ec71d39946880c2285ba2e366ca0283f327ea3fee19e7806abafde2",
+      "_id": "6b01b9119ae6db4a76263217"
+    },
+    {
+      "id": "crawled-1795275022848-1",
+      "jobTitle": "Digital Transformation Solutions Architect",
+      "company": "Mckinsey",
+      "description": "Advise Fortune 500 enterprises on legacy modernization. Proven expertise in AWS, Google Cloud, Docker, Kubernetes, and Technical Leadership. Experience facilitating Agile & Scrum sprint ceremonies.",
+      "location": "Chicago, IL",
+      "industry": "Consulting",
+      "sourceUrl": "https://careers.mckinsey.com/technology",
+      "sourceId": "src-3",
+      "postedDate": "2026-11-21T15:30:22.848Z",
+      "crawledDate": "2026-11-21T15:30:22.848Z",
+      "contentHash": "0caf089bb7e7d4a104379e54649cf119aa94f56b7d6b591614c59585f239d718",
+      "_id": "6b01b90e9ae6db4a76263216"
+    },
+    {
+      "id": "crawled-1795275018721-2",
+      "jobTitle": "SecOps & Cloud Compliance Architect",
+      "company": "Stripe",
+      "description": "Lead cloud security posture for Stripe. Strong background in AWS, Kubernetes, CI/CD Pipelines, and SOC2 / PCI-DSS compliance. Exceptional Cross-functional Collaboration and Problem Solving.",
+      "location": "Jersey City, NJ (Hybrid)",
+      "industry": "Financial Services",
+      "sourceUrl": "https://careers.stripe.com/jobs",
+      "sourceId": "src-1",
+      "postedDate": "2026-11-21T15:30:18.721Z",
+      "crawledDate": "2026-11-21T15:30:18.721Z",
+      "contentHash": "3c9fe886509af9f721663c239d7419884c8acdd484c3c66879a392d7fcaf026b",
+      "_id": "6b01b90a9ae6db4a76263215"
+    },
+    {
+      "id": "crawled-1795275018721-1",
+      "jobTitle": "Quantitative Software Engineer, Core Ledger",
+      "company": "Stripe",
+      "description": "Build real-time settlement engines handling billions in transactions. Requires Go, Python, PostgreSQL, Redis, and Payment Systems expertise. Experience with distributed consensus and high-throughput AWS infrastructure.",
+      "location": "New York, NY",
+      "industry": "Financial Services",
+      "sourceUrl": "https://careers.stripe.com/jobs",
+      "sourceId": "src-1",
+      "postedDate": "2026-11-21T15:30:18.721Z",
+      "crawledDate": "2026-11-21T15:30:18.721Z",
+      "contentHash": "eefbd342713dc956c2c1f81a74813fd084052128bb4d76a5a78a90367a722d0f",
+      "_id": "6b01b90a9ae6db4a76263214"
+    },
     {
       "id": "job-1",
       "jobTitle": "Senior Full Stack Engineer, Payments Platform",
@@ -195,10 +309,11 @@
   ],
   "skills": [
     {
-      "id": "sk-1",
+      "id": "sk-python",
       "name": "Python",
       "normalizedName": "Python",
-      "category": "Programming Languages"
+      "category": "Programming Languages",
+      "createdDate": "2026-11-21T15:30:25.212Z"
     },
     {
       "id": "sk-2",
@@ -213,10 +328,11 @@
       "category": "Programming Languages"
     },
     {
-      "id": "sk-4",
+      "id": "sk-go",
       "name": "Go",
       "normalizedName": "Go",
-      "category": "Programming Languages"
+      "category": "Programming Languages",
+      "createdDate": "2026-11-21T15:30:25.212Z"
     },
     {
       "id": "sk-5",
@@ -243,34 +359,39 @@
       "category": "Frameworks & Libraries"
     },
     {
-      "id": "sk-9",
+      "id": "sk-aws",
       "name": "AWS",
       "normalizedName": "AWS",
-      "category": "Cloud Technologies"
+      "category": "Cloud Technologies",
+      "createdDate": "2026-11-21T15:30:30.517Z"
     },
     {
-      "id": "sk-10",
+      "id": "sk-kubernetes",
       "name": "Kubernetes",
       "normalizedName": "Kubernetes",
-      "category": "Cloud Technologies"
+      "category": "Cloud Technologies",
+      "createdDate": "2026-11-21T15:30:30.517Z"
     },
     {
-      "id": "sk-11",
+      "id": "sk-docker",
       "name": "Docker",
       "normalizedName": "Docker",
-      "category": "Cloud Technologies"
+      "category": "Cloud Technologies",
+      "createdDate": "2026-11-21T15:30:30.517Z"
     },
     {
-      "id": "sk-12",
+      "id": "sk-google-cloud",
       "name": "Google Cloud",
       "normalizedName": "Google Cloud",
-      "category": "Cloud Technologies"
+      "category": "Cloud Technologies",
+      "createdDate": "2026-11-21T15:30:30.517Z"
     },
     {
-      "id": "sk-13",
+      "id": "sk-postgresql",
       "name": "PostgreSQL",
       "normalizedName": "PostgreSQL",
-      "category": "Databases"
+      "category": "Databases",
+      "createdDate": "2026-11-21T15:30:25.212Z"
     },
     {
       "id": "sk-14",
@@ -279,10 +400,11 @@
       "category": "Databases"
     },
     {
-      "id": "sk-15",
+      "id": "sk-redis",
       "name": "Redis",
       "normalizedName": "Redis",
-      "category": "Databases"
+      "category": "Databases",
+      "createdDate": "2026-11-21T15:30:25.212Z"
     },
     {
       "id": "sk-16",
@@ -291,10 +413,11 @@
       "category": "AI & Machine Learning"
     },
     {
-      "id": "sk-17",
+      "id": "sk-machine-learning",
       "name": "Machine Learning",
       "normalizedName": "Machine Learning",
-      "category": "AI & Machine Learning"
+      "category": "AI & Machine Learning",
+      "createdDate": "2026-11-21T15:30:28.117Z"
     },
     {
       "id": "sk-18",
@@ -315,10 +438,11 @@
       "category": "Technical Skills"
     },
     {
-      "id": "sk-21",
+      "id": "sk-ci-cd-pipelines",
       "name": "CI/CD Pipelines",
       "normalizedName": "CI/CD Pipelines",
-      "category": "Technical Skills"
+      "category": "Technical Skills",
+      "createdDate": "2026-11-21T15:30:26.215Z"
     },
     {
       "id": "sk-22",
@@ -327,34 +451,39 @@
       "category": "Technical Skills"
     },
     {
-      "id": "sk-23",
+      "id": "sk-cross-functional-collaboration",
       "name": "Cross-functional Collaboration",
       "normalizedName": "Cross-functional Collaboration",
-      "category": "Soft Skills"
+      "category": "Soft Skills",
+      "createdDate": "2026-11-21T15:30:26.215Z"
     },
     {
-      "id": "sk-24",
+      "id": "sk-problem-solving",
       "name": "Problem Solving",
       "normalizedName": "Problem Solving",
-      "category": "Soft Skills"
+      "category": "Soft Skills",
+      "createdDate": "2026-11-21T15:30:26.215Z"
     },
     {
-      "id": "sk-25",
+      "id": "sk-agile---scrum",
       "name": "Agile & Scrum",
       "normalizedName": "Agile & Scrum",
-      "category": "Management & Leadership"
+      "category": "Management & Leadership",
+      "createdDate": "2026-11-21T15:30:30.517Z"
     },
     {
-      "id": "sk-26",
+      "id": "sk-technical-leadership",
       "name": "Technical Leadership",
       "normalizedName": "Technical Leadership",
-      "category": "Management & Leadership"
+      "category": "Management & Leadership",
+      "createdDate": "2026-11-21T15:30:30.517Z"
     },
     {
-      "id": "sk-27",
+      "id": "sk-payment-systems",
       "name": "Payment Systems",
       "normalizedName": "Payment Systems",
-      "category": "Domain-Specific"
+      "category": "Domain-Specific",
+      "createdDate": "2026-11-21T15:30:25.212Z"
     },
     {
       "id": "sk-28",
@@ -1265,6 +1394,474 @@
       "jobTitle": "Clinical Workflow Integration Specialist",
       "company": "Optum",
       "industry": "Healthcare"
+    },
+    {
+      "id": "js-crawled-1795275018721-1-sk-python-0",
+      "jobId": "crawled-1795275018721-1",
+      "skillId": "sk-python",
+      "skillName": "Python",
+      "normalizedName": "Python",
+      "category": "Programming Languages",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:19.245Z",
+      "jobTitle": "Quantitative Software Engineer, Core Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275018721-1-sk-go-1",
+      "jobId": "crawled-1795275018721-1",
+      "skillId": "sk-go",
+      "skillName": "Go",
+      "normalizedName": "Go",
+      "category": "Programming Languages",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:19.245Z",
+      "jobTitle": "Quantitative Software Engineer, Core Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275018721-1-sk-aws-2",
+      "jobId": "crawled-1795275018721-1",
+      "skillId": "sk-aws",
+      "skillName": "AWS",
+      "normalizedName": "AWS",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:19.245Z",
+      "jobTitle": "Quantitative Software Engineer, Core Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275018721-1-sk-postgresql-3",
+      "jobId": "crawled-1795275018721-1",
+      "skillId": "sk-postgresql",
+      "skillName": "PostgreSQL",
+      "normalizedName": "PostgreSQL",
+      "category": "Databases",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:19.245Z",
+      "jobTitle": "Quantitative Software Engineer, Core Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275018721-1-sk-redis-4",
+      "jobId": "crawled-1795275018721-1",
+      "skillId": "sk-redis",
+      "skillName": "Redis",
+      "normalizedName": "Redis",
+      "category": "Databases",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:19.245Z",
+      "jobTitle": "Quantitative Software Engineer, Core Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275018721-1-sk-payment-systems-5",
+      "jobId": "crawled-1795275018721-1",
+      "skillId": "sk-payment-systems",
+      "skillName": "Payment Systems",
+      "normalizedName": "Payment Systems",
+      "category": "Domain-Specific",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:19.245Z",
+      "jobTitle": "Quantitative Software Engineer, Core Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275018721-2-sk-aws-0",
+      "jobId": "crawled-1795275018721-2",
+      "skillId": "sk-aws",
+      "skillName": "AWS",
+      "normalizedName": "AWS",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:20.794Z",
+      "jobTitle": "SecOps & Cloud Compliance Architect",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275018721-2-sk-kubernetes-1",
+      "jobId": "crawled-1795275018721-2",
+      "skillId": "sk-kubernetes",
+      "skillName": "Kubernetes",
+      "normalizedName": "Kubernetes",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:20.794Z",
+      "jobTitle": "SecOps & Cloud Compliance Architect",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275018721-2-sk-ci-cd-pipelines-2",
+      "jobId": "crawled-1795275018721-2",
+      "skillId": "sk-ci-cd-pipelines",
+      "skillName": "CI/CD Pipelines",
+      "normalizedName": "CI/CD Pipelines",
+      "category": "Technical Skills",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:20.794Z",
+      "jobTitle": "SecOps & Cloud Compliance Architect",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275018721-2-sk-cross-functional-collaboration-3",
+      "jobId": "crawled-1795275018721-2",
+      "skillId": "sk-cross-functional-collaboration",
+      "skillName": "Cross-functional Collaboration",
+      "normalizedName": "Cross-functional Collaboration",
+      "category": "Soft Skills",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:20.794Z",
+      "jobTitle": "SecOps & Cloud Compliance Architect",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275018721-2-sk-problem-solving-4",
+      "jobId": "crawled-1795275018721-2",
+      "skillId": "sk-problem-solving",
+      "skillName": "Problem Solving",
+      "normalizedName": "Problem Solving",
+      "category": "Soft Skills",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:20.794Z",
+      "jobTitle": "SecOps & Cloud Compliance Architect",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275022848-1-sk-aws-0",
+      "jobId": "crawled-1795275022848-1",
+      "skillId": "sk-aws",
+      "skillName": "AWS",
+      "normalizedName": "AWS",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:23.245Z",
+      "jobTitle": "Digital Transformation Solutions Architect",
+      "company": "Mckinsey",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-crawled-1795275022848-1-sk-google-cloud-1",
+      "jobId": "crawled-1795275022848-1",
+      "skillId": "sk-google-cloud",
+      "skillName": "Google Cloud",
+      "normalizedName": "Google Cloud",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:23.245Z",
+      "jobTitle": "Digital Transformation Solutions Architect",
+      "company": "Mckinsey",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-crawled-1795275022848-1-sk-kubernetes-2",
+      "jobId": "crawled-1795275022848-1",
+      "skillId": "sk-kubernetes",
+      "skillName": "Kubernetes",
+      "normalizedName": "Kubernetes",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:23.245Z",
+      "jobTitle": "Digital Transformation Solutions Architect",
+      "company": "Mckinsey",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-crawled-1795275022848-1-sk-docker-3",
+      "jobId": "crawled-1795275022848-1",
+      "skillId": "sk-docker",
+      "skillName": "Docker",
+      "normalizedName": "Docker",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:23.245Z",
+      "jobTitle": "Digital Transformation Solutions Architect",
+      "company": "Mckinsey",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-crawled-1795275022848-1-sk-agile---scrum-4",
+      "jobId": "crawled-1795275022848-1",
+      "skillId": "sk-agile---scrum",
+      "skillName": "Agile & Scrum",
+      "normalizedName": "Agile & Scrum",
+      "category": "Management & Leadership",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:23.245Z",
+      "jobTitle": "Digital Transformation Solutions Architect",
+      "company": "Mckinsey",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-crawled-1795275022848-1-sk-technical-leadership-5",
+      "jobId": "crawled-1795275022848-1",
+      "skillId": "sk-technical-leadership",
+      "skillName": "Technical Leadership",
+      "normalizedName": "Technical Leadership",
+      "category": "Management & Leadership",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:23.245Z",
+      "jobTitle": "Digital Transformation Solutions Architect",
+      "company": "Mckinsey",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-crawled-1795275024792-1-sk-python-0",
+      "jobId": "crawled-1795275024792-1",
+      "skillId": "sk-python",
+      "skillName": "Python",
+      "normalizedName": "Python",
+      "category": "Programming Languages",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:25.212Z",
+      "jobTitle": "Quantitative Software Engineer, Core Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275024792-1-sk-go-1",
+      "jobId": "crawled-1795275024792-1",
+      "skillId": "sk-go",
+      "skillName": "Go",
+      "normalizedName": "Go",
+      "category": "Programming Languages",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:25.212Z",
+      "jobTitle": "Quantitative Software Engineer, Core Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275024792-1-sk-aws-2",
+      "jobId": "crawled-1795275024792-1",
+      "skillId": "sk-aws",
+      "skillName": "AWS",
+      "normalizedName": "AWS",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:25.212Z",
+      "jobTitle": "Quantitative Software Engineer, Core Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275024792-1-sk-postgresql-3",
+      "jobId": "crawled-1795275024792-1",
+      "skillId": "sk-postgresql",
+      "skillName": "PostgreSQL",
+      "normalizedName": "PostgreSQL",
+      "category": "Databases",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:25.212Z",
+      "jobTitle": "Quantitative Software Engineer, Core Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275024792-1-sk-redis-4",
+      "jobId": "crawled-1795275024792-1",
+      "skillId": "sk-redis",
+      "skillName": "Redis",
+      "normalizedName": "Redis",
+      "category": "Databases",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:25.212Z",
+      "jobTitle": "Quantitative Software Engineer, Core Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275024792-1-sk-payment-systems-5",
+      "jobId": "crawled-1795275024792-1",
+      "skillId": "sk-payment-systems",
+      "skillName": "Payment Systems",
+      "normalizedName": "Payment Systems",
+      "category": "Domain-Specific",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:25.212Z",
+      "jobTitle": "Quantitative Software Engineer, Core Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275024793-2-sk-aws-0",
+      "jobId": "crawled-1795275024793-2",
+      "skillId": "sk-aws",
+      "skillName": "AWS",
+      "normalizedName": "AWS",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:26.215Z",
+      "jobTitle": "SecOps & Cloud Compliance Architect",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275024793-2-sk-kubernetes-1",
+      "jobId": "crawled-1795275024793-2",
+      "skillId": "sk-kubernetes",
+      "skillName": "Kubernetes",
+      "normalizedName": "Kubernetes",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:26.215Z",
+      "jobTitle": "SecOps & Cloud Compliance Architect",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275024793-2-sk-ci-cd-pipelines-2",
+      "jobId": "crawled-1795275024793-2",
+      "skillId": "sk-ci-cd-pipelines",
+      "skillName": "CI/CD Pipelines",
+      "normalizedName": "CI/CD Pipelines",
+      "category": "Technical Skills",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:26.215Z",
+      "jobTitle": "SecOps & Cloud Compliance Architect",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275024793-2-sk-cross-functional-collaboration-3",
+      "jobId": "crawled-1795275024793-2",
+      "skillId": "sk-cross-functional-collaboration",
+      "skillName": "Cross-functional Collaboration",
+      "normalizedName": "Cross-functional Collaboration",
+      "category": "Soft Skills",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:26.215Z",
+      "jobTitle": "SecOps & Cloud Compliance Architect",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-crawled-1795275024793-2-sk-problem-solving-4",
+      "jobId": "crawled-1795275024793-2",
+      "skillId": "sk-problem-solving",
+      "skillName": "Problem Solving",
+      "normalizedName": "Problem Solving",
+      "category": "Soft Skills",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:26.215Z",
+      "jobTitle": "SecOps & Cloud Compliance Architect",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-job-crawled-1795275025106-2-sk-machine-learning-0",
+      "jobId": "job-crawled-1795275025106-2",
+      "skillId": "sk-machine-learning",
+      "skillName": "Machine Learning",
+      "normalizedName": "Machine Learning",
+      "category": "AI & Machine Learning",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:27.727Z",
+      "jobTitle": "AI Research & Engineering",
+      "company": "Boards",
+      "industry": "Technology"
+    },
+    {
+      "id": "js-job-crawled-1795275027468-2-sk-machine-learning-0",
+      "jobId": "job-crawled-1795275027468-2",
+      "skillId": "sk-machine-learning",
+      "skillName": "Machine Learning",
+      "normalizedName": "Machine Learning",
+      "category": "AI & Machine Learning",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:28.117Z",
+      "jobTitle": "AI Research & Engineering",
+      "company": "Boards",
+      "industry": "Technology"
+    },
+    {
+      "id": "js-crawled-1795275030181-1-sk-aws-0",
+      "jobId": "crawled-1795275030181-1",
+      "skillId": "sk-aws",
+      "skillName": "AWS",
+      "normalizedName": "AWS",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:30.517Z",
+      "jobTitle": "Digital Transformation Solutions Architect",
+      "company": "Mckinsey",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-crawled-1795275030181-1-sk-google-cloud-1",
+      "jobId": "crawled-1795275030181-1",
+      "skillId": "sk-google-cloud",
+      "skillName": "Google Cloud",
+      "normalizedName": "Google Cloud",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:30.517Z",
+      "jobTitle": "Digital Transformation Solutions Architect",
+      "company": "Mckinsey",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-crawled-1795275030181-1-sk-kubernetes-2",
+      "jobId": "crawled-1795275030181-1",
+      "skillId": "sk-kubernetes",
+      "skillName": "Kubernetes",
+      "normalizedName": "Kubernetes",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:30.517Z",
+      "jobTitle": "Digital Transformation Solutions Architect",
+      "company": "Mckinsey",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-crawled-1795275030181-1-sk-docker-3",
+      "jobId": "crawled-1795275030181-1",
+      "skillId": "sk-docker",
+      "skillName": "Docker",
+      "normalizedName": "Docker",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:30.517Z",
+      "jobTitle": "Digital Transformation Solutions Architect",
+      "company": "Mckinsey",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-crawled-1795275030181-1-sk-agile---scrum-4",
+      "jobId": "crawled-1795275030181-1",
+      "skillId": "sk-agile---scrum",
+      "skillName": "Agile & Scrum",
+      "normalizedName": "Agile & Scrum",
+      "category": "Management & Leadership",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:30.517Z",
+      "jobTitle": "Digital Transformation Solutions Architect",
+      "company": "Mckinsey",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-crawled-1795275030181-1-sk-technical-leadership-5",
+      "jobId": "crawled-1795275030181-1",
+      "skillId": "sk-technical-leadership",
+      "skillName": "Technical Leadership",
+      "normalizedName": "Technical Leadership",
+      "category": "Management & Leadership",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T15:30:30.517Z",
+      "jobTitle": "Digital Transformation Solutions Architect",
+      "company": "Mckinsey",
+      "industry": "Consulting"
     }
   ],
   "snapshots": [
@@ -1884,9 +2481,406 @@
         "Financial Services": 2
       },
       "calculatedDate": "2026-11-20T23:59:59Z"
+    },
+    {
+      "id": "snap-sk-python-2026-Q4",
+      "skillId": "sk-python",
+      "skillName": "Python",
+      "normalizedName": "Python",
+      "category": "Programming Languages",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 2,
+      "uniqueJobCount": 2,
+      "industryBreakdown": {
+        "Financial Services": 2
+      },
+      "demandPercentage": 25,
+      "calculatedDate": "2026-11-21T15:30:38.907Z"
+    },
+    {
+      "id": "snap-sk-go-2026-Q4",
+      "skillId": "sk-go",
+      "skillName": "Go",
+      "normalizedName": "Go",
+      "category": "Programming Languages",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 2,
+      "uniqueJobCount": 2,
+      "industryBreakdown": {
+        "Financial Services": 2
+      },
+      "demandPercentage": 25,
+      "calculatedDate": "2026-11-21T15:30:38.907Z"
+    },
+    {
+      "id": "snap-sk-aws-2026-Q4",
+      "skillId": "sk-aws",
+      "skillName": "AWS",
+      "normalizedName": "AWS",
+      "category": "Cloud Technologies",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 6,
+      "uniqueJobCount": 6,
+      "industryBreakdown": {
+        "Financial Services": 4,
+        "Consulting": 2
+      },
+      "demandPercentage": 75,
+      "calculatedDate": "2026-11-21T15:30:38.907Z"
+    },
+    {
+      "id": "snap-sk-postgresql-2026-Q4",
+      "skillId": "sk-postgresql",
+      "skillName": "PostgreSQL",
+      "normalizedName": "PostgreSQL",
+      "category": "Databases",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 2,
+      "uniqueJobCount": 2,
+      "industryBreakdown": {
+        "Financial Services": 2
+      },
+      "demandPercentage": 25,
+      "calculatedDate": "2026-11-21T15:30:38.908Z"
+    },
+    {
+      "id": "snap-sk-redis-2026-Q4",
+      "skillId": "sk-redis",
+      "skillName": "Redis",
+      "normalizedName": "Redis",
+      "category": "Databases",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 2,
+      "uniqueJobCount": 2,
+      "industryBreakdown": {
+        "Financial Services": 2
+      },
+      "demandPercentage": 25,
+      "calculatedDate": "2026-11-21T15:30:38.908Z"
+    },
+    {
+      "id": "snap-sk-payment-systems-2026-Q4",
+      "skillId": "sk-payment-systems",
+      "skillName": "Payment Systems",
+      "normalizedName": "Payment Systems",
+      "category": "Domain-Specific",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 2,
+      "uniqueJobCount": 2,
+      "industryBreakdown": {
+        "Financial Services": 2
+      },
+      "demandPercentage": 25,
+      "calculatedDate": "2026-11-21T15:30:38.908Z"
+    },
+    {
+      "id": "snap-sk-kubernetes-2026-Q4",
+      "skillId": "sk-kubernetes",
+      "skillName": "Kubernetes",
+      "normalizedName": "Kubernetes",
+      "category": "Cloud Technologies",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 4,
+      "uniqueJobCount": 4,
+      "industryBreakdown": {
+        "Financial Services": 2,
+        "Consulting": 2
+      },
+      "demandPercentage": 50,
+      "calculatedDate": "2026-11-21T15:30:38.908Z"
+    },
+    {
+      "id": "snap-sk-ci-cd-pipelines-2026-Q4",
+      "skillId": "sk-ci-cd-pipelines",
+      "skillName": "CI/CD Pipelines",
+      "normalizedName": "CI/CD Pipelines",
+      "category": "Technical Skills",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 2,
+      "uniqueJobCount": 2,
+      "industryBreakdown": {
+        "Financial Services": 2
+      },
+      "demandPercentage": 25,
+      "calculatedDate": "2026-11-21T15:30:38.908Z"
+    },
+    {
+      "id": "snap-sk-cross-functional-collaboration-2026-Q4",
+      "skillId": "sk-cross-functional-collaboration",
+      "skillName": "Cross-functional Collaboration",
+      "normalizedName": "Cross-functional Collaboration",
+      "category": "Soft Skills",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 2,
+      "uniqueJobCount": 2,
+      "industryBreakdown": {
+        "Financial Services": 2
+      },
+      "demandPercentage": 25,
+      "calculatedDate": "2026-11-21T15:30:38.908Z"
+    },
+    {
+      "id": "snap-sk-problem-solving-2026-Q4",
+      "skillId": "sk-problem-solving",
+      "skillName": "Problem Solving",
+      "normalizedName": "Problem Solving",
+      "category": "Soft Skills",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 2,
+      "uniqueJobCount": 2,
+      "industryBreakdown": {
+        "Financial Services": 2
+      },
+      "demandPercentage": 25,
+      "calculatedDate": "2026-11-21T15:30:38.908Z"
+    },
+    {
+      "id": "snap-sk-google-cloud-2026-Q4",
+      "skillId": "sk-google-cloud",
+      "skillName": "Google Cloud",
+      "normalizedName": "Google Cloud",
+      "category": "Cloud Technologies",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 2,
+      "uniqueJobCount": 2,
+      "industryBreakdown": {
+        "Consulting": 2
+      },
+      "demandPercentage": 25,
+      "calculatedDate": "2026-11-21T15:30:38.908Z"
+    },
+    {
+      "id": "snap-sk-docker-2026-Q4",
+      "skillId": "sk-docker",
+      "skillName": "Docker",
+      "normalizedName": "Docker",
+      "category": "Cloud Technologies",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 2,
+      "uniqueJobCount": 2,
+      "industryBreakdown": {
+        "Consulting": 2
+      },
+      "demandPercentage": 25,
+      "calculatedDate": "2026-11-21T15:30:38.908Z"
+    },
+    {
+      "id": "snap-sk-agile---scrum-2026-Q4",
+      "skillId": "sk-agile---scrum",
+      "skillName": "Agile & Scrum",
+      "normalizedName": "Agile & Scrum",
+      "category": "Management & Leadership",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 2,
+      "uniqueJobCount": 2,
+      "industryBreakdown": {
+        "Consulting": 2
+      },
+      "demandPercentage": 25,
+      "calculatedDate": "2026-11-21T15:30:38.908Z"
+    },
+    {
+      "id": "snap-sk-technical-leadership-2026-Q4",
+      "skillId": "sk-technical-leadership",
+      "skillName": "Technical Leadership",
+      "normalizedName": "Technical Leadership",
+      "category": "Management & Leadership",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 2,
+      "uniqueJobCount": 2,
+      "industryBreakdown": {
+        "Consulting": 2
+      },
+      "demandPercentage": 25,
+      "calculatedDate": "2026-11-21T15:30:38.908Z"
+    },
+    {
+      "id": "snap-sk-machine-learning-2026-Q4",
+      "skillId": "sk-machine-learning",
+      "skillName": "Machine Learning",
+      "normalizedName": "Machine Learning",
+      "category": "AI & Machine Learning",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 2,
+      "uniqueJobCount": 2,
+      "industryBreakdown": {
+        "Technology": 2
+      },
+      "demandPercentage": 25,
+      "calculatedDate": "2026-11-21T15:30:38.908Z"
     }
   ],
   "aiInsights": [
+    {
+      "id": "insight-combinations-1795275230115",
+      "insightType": "skill_combinations",
+      "title": "High Co-Occurrence Cluster: Python + PyTorch + Kubernetes + Docker",
+      "description": "Over 82% of machine learning listings analyzed require concurrent proficiency in model training (PyTorch) and production container lifecycle management (Kubernetes, Docker, Cloud). The traditional divide between ML modeling and DevOps has consolidated.",
+      "supportingStatistics": [
+        {
+          "label": "Cluster Co-Occurrence",
+          "value": "82.4%"
+        },
+        {
+          "label": "Dominant Industry",
+          "value": "Technology & AI Labs"
+        }
+      ],
+      "actionableRecommendations": [
+        "Standardize job families into \"AI Platform Engineer\" to reflect this blended discipline.",
+        "Ensure onboarding includes live access to container registries and evaluation clusters from Day 1."
+      ],
+      "skillsInvolved": [
+        "Python",
+        "PyTorch",
+        "Kubernetes",
+        "Docker"
+      ],
+      "generatedDate": "2026-11-21T15:33:50.115Z",
+      "isAiGenerated": true
+    },
+    {
+      "id": "insight-upskilling-1795275230115",
+      "insightType": "upskilling",
+      "title": "Workforce Upskilling: Building Internal RAG & Prompt Engineering Capabilities",
+      "description": "Retaining and upskilling existing software engineers in retrieval-augmented architectures saves organizations an estimated $32,000 per seat compared to external recruitment agency fees.",
+      "supportingStatistics": [
+        {
+          "label": "Cost Reduction vs Agency",
+          "value": "48%"
+        },
+        {
+          "label": "Team Velocity Ramp",
+          "value": "3 weeks to initial production PR"
+        }
+      ],
+      "actionableRecommendations": [
+        "Implement structured 4-week internal workshops centered on vector search, prompt steering, and evaluation datasets.",
+        "Recognize and promote internal engineers who contribute AI productivity tools to company repositories."
+      ],
+      "skillsInvolved": [
+        "Python",
+        "Generative AI",
+        "RAG Systems",
+        "Problem Solving"
+      ],
+      "generatedDate": "2026-11-21T15:33:50.115Z",
+      "isAiGenerated": true
+    },
+    {
+      "id": "insight-recruitment-1795275230115",
+      "insightType": "recruitment",
+      "title": "Recruitment Advisory: Full-Stack Architecture + AI Prototyping Premium",
+      "description": "Job descriptions that pair TypeScript and Next.js frontend fluency with backend Python / AI inference pipelines show a 1.3x higher compensation band and extended vacancy periods.",
+      "supportingStatistics": [
+        {
+          "label": "Time-to-Hire",
+          "value": "44 days average (+35%)"
+        },
+        {
+          "label": "Candidate Demand Ratio",
+          "value": "4.8 open roles per qualified applicant"
+        }
+      ],
+      "actionableRecommendations": [
+        "Compress interview loops to under 10 business days for full-stack candidates with demonstrated AI portfolio projects.",
+        "Use real-world system design discussions instead of generic algorithmic whiteboard puzzles."
+      ],
+      "skillsInvolved": [
+        "TypeScript",
+        "Next.js",
+        "Python",
+        "System Design"
+      ],
+      "generatedDate": "2026-11-21T15:33:50.115Z",
+      "isAiGenerated": true
+    },
+    {
+      "id": "insight-industry-1795275230115",
+      "insightType": "industry_shift",
+      "title": "Financial Services & Healthcare Aggressively Adopting Container Orchestration",
+      "description": "Postings in highly-regulated verticals show a 42% uptick in Kubernetes, Docker, and AWS mandates, accompanied by strict compliance validation (HIPAA / SOC2 / PCI-DSS). Cloud modernization is no longer restricted to pure-play tech startups.",
+      "supportingStatistics": [
+        {
+          "label": "Regulated Cloud Adoption",
+          "value": "72% of new postings"
+        },
+        {
+          "label": "Primary Tech Stack",
+          "value": "Kubernetes, AWS, Go, PostgreSQL"
+        },
+        {
+          "label": "Compliance In Demand",
+          "value": "HIPAA & SOC2"
+        }
+      ],
+      "actionableRecommendations": [
+        "Partner with compliance engineering leads to design role-specific DevSecOps interview rubrics.",
+        "Sponsor cloud security certifications (AWS Security Specialty, CKA) for existing infrastructure staff."
+      ],
+      "skillsInvolved": [
+        "Kubernetes",
+        "AWS",
+        "Docker",
+        "HIPAA Compliance"
+      ],
+      "generatedDate": "2026-11-21T15:33:50.115Z",
+      "isAiGenerated": true
+    },
+    {
+      "id": "insight-declining-1795275230115",
+      "insightType": "declining",
+      "title": "Rapid Sunsetting of Legacy Stacks",
+      "description": "Job descriptions requiring legacy paradigms such as legacy technologies have contracted by 45.0%. Companies are shifting maintenance budgets into greenfield cloud and framework migrations.",
+      "supportingStatistics": [
+        {
+          "label": "Largest Demand Drop",
+          "value": "Legacy PHP"
+        },
+        {
+          "label": "YoY Contraction",
+          "value": "-48%"
+        },
+        {
+          "label": "Migration Destination",
+          "value": "TypeScript / Next.js / Cloud-Native"
+        }
+      ],
+      "actionableRecommendations": [
+        "Eliminate outdated framework prerequisites from standard job templates to widen candidate funnels.",
+        "Offer transition sabbaticals or structured upskilling for internal teams maintaining deprecated systems."
+      ],
+      "skillsInvolved": [],
+      "generatedDate": "2026-11-21T15:33:50.115Z",
+      "isAiGenerated": true
+    },
+    {
+      "id": "insight-emerging-1795275230115",
+      "insightType": "emerging",
+      "title": "Accelerated Hiring for Modern AI & Cloud Competencies",
+      "description": "Market listings demonstrate a profound surge in requirements for . Average demand across these competencies has grown by +45%, representing an enterprise-wide shift toward high-velocity architectures.",
+      "supportingStatistics": [
+        {
+          "label": "Fastest Rising Competency",
+          "value": "Generative AI"
+        },
+        {
+          "label": "Demand Velocity",
+          "value": "+65.2%"
+        },
+        {
+          "label": "Market Role Penetration",
+          "value": "68% of tech jobs"
+        }
+      ],
+      "actionableRecommendations": [
+        "Revamp engineering talent benchmarks to test practical API orchestration and modern pipeline architecture.",
+        "Anticipate candidate competition by offering flexible remote schedules or performance bonuses for verified practitioners."
+      ],
+      "skillsInvolved": [],
+      "generatedDate": "2026-11-21T15:33:50.115Z",
+      "isAiGenerated": true
+    },
     {
       "id": "insight-1",
       "insightType": "emerging",
