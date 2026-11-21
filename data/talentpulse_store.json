@@ -1,0 +1,2068 @@
+{
+  "sources": [
+    {
+      "id": "src-1",
+      "url": "https://careers.stripe.com/jobs",
+      "sourceName": "Stripe Careers",
+      "sourceType": "Financial Services",
+      "createdDate": "2026-01-15T09:00:00Z",
+      "lastCrawlDate": "2026-11-20T14:30:00Z",
+      "crawlStatus": "completed",
+      "jobCount": 12
+    },
+    {
+      "id": "src-2",
+      "url": "https://boards.greenhouse.io/anthropic",
+      "sourceName": "Anthropic AI",
+      "sourceType": "Technology",
+      "createdDate": "2026-02-10T10:00:00Z",
+      "lastCrawlDate": "2026-11-21T08:15:00Z",
+      "crawlStatus": "completed",
+      "jobCount": 14
+    },
+    {
+      "id": "src-3",
+      "url": "https://careers.mckinsey.com/technology",
+      "sourceName": "McKinsey Digital",
+      "sourceType": "Consulting",
+      "createdDate": "2026-03-01T11:00:00Z",
+      "lastCrawlDate": "2026-11-19T16:45:00Z",
+      "crawlStatus": "completed",
+      "jobCount": 9
+    },
+    {
+      "id": "src-4",
+      "url": "https://optum.wd1.myworkdayjobs.com/Careers",
+      "sourceName": "Optum Health & Tech",
+      "sourceType": "Healthcare",
+      "createdDate": "2026-04-12T08:30:00Z",
+      "lastCrawlDate": "2026-11-18T11:20:00Z",
+      "crawlStatus": "completed",
+      "jobCount": 8
+    },
+    {
+      "id": "src-5",
+      "url": "https://www.shopify.com/careers/engineering",
+      "sourceName": "Shopify Engineering",
+      "sourceType": "E-commerce",
+      "createdDate": "2026-05-20T13:00:00Z",
+      "lastCrawlDate": "2026-11-20T18:00:00Z",
+      "crawlStatus": "completed",
+      "jobCount": 11
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job-1",
+      "jobTitle": "Senior Full Stack Engineer, Payments Platform",
+      "company": "Stripe",
+      "description": "We are looking for a Senior Full Stack Engineer to scale our core global payment rails. You will architect high-throughput services using TypeScript, Node.js, and React, backed by PostgreSQL and AWS infrastructure. Experience with distributed systems, REST APIs, and Payment Systems compliance is essential.",
+      "location": "San Francisco, CA (Hybrid)",
+      "industry": "Financial Services",
+      "sourceUrl": "https://careers.stripe.com/jobs/senior-full-stack",
+      "sourceId": "src-1",
+      "postedDate": "2026-10-15T08:00:00Z",
+      "crawledDate": "2026-11-20T14:30:00Z",
+      "contentHash": "hash-stripe-001",
+      "extractedSkillsCount": 7
+    },
+    {
+      "id": "job-2",
+      "jobTitle": "Staff AI Infrastructure Engineer",
+      "company": "Anthropic",
+      "description": "Join Anthropic to build resilient computing clusters for foundation model evaluation. Strong proficiency in Python, PyTorch, Kubernetes, and Docker on Cloud infrastructure (AWS and Google Cloud). Deep understanding of Generative AI, RAG Systems, and Technical Leadership required.",
+      "location": "San Francisco, CA (Onsite)",
+      "industry": "Technology",
+      "sourceUrl": "https://boards.greenhouse.io/anthropic/jobs/staff-ai-infra",
+      "sourceId": "src-2",
+      "postedDate": "2026-10-20T11:00:00Z",
+      "crawledDate": "2026-11-21T08:15:00Z",
+      "contentHash": "hash-anthropic-001",
+      "extractedSkillsCount": 9
+    },
+    {
+      "id": "job-3",
+      "jobTitle": "Senior Cloud Architect & Digital Transformation Lead",
+      "company": "McKinsey & Company",
+      "description": "Lead enterprise clients in cloud migrations and modern microservices architecture. Expert knowledge of AWS, Google Cloud, Kubernetes, CI/CD Pipelines, and Agile & Scrum methodologies. Outstanding Cross-functional Collaboration and Problem Solving abilities.",
+      "location": "New York, NY",
+      "industry": "Consulting",
+      "sourceUrl": "https://careers.mckinsey.com/technology/cloud-lead",
+      "sourceId": "src-3",
+      "postedDate": "2026-09-12T09:30:00Z",
+      "crawledDate": "2026-11-19T16:45:00Z",
+      "contentHash": "hash-mckinsey-001",
+      "extractedSkillsCount": 7
+    },
+    {
+      "id": "job-4",
+      "jobTitle": "Lead Healthcare Data Engineer (ML/AI)",
+      "company": "Optum",
+      "description": "Architect secure data lakes processing patient analytics. Requires Python, PostgreSQL, MongoDB, Machine Learning algorithms, and strict adherence to HIPAA Compliance. Experience deploying RAG Systems and FastAPI endpoints in a hybrid cloud.",
+      "location": "Boston, MA (Remote)",
+      "industry": "Healthcare",
+      "sourceUrl": "https://optum.wd1.myworkdayjobs.com/Careers/lead-data-eng",
+      "sourceId": "src-4",
+      "postedDate": "2026-10-05T14:00:00Z",
+      "crawledDate": "2026-11-18T11:20:00Z",
+      "contentHash": "hash-optum-001",
+      "extractedSkillsCount": 8
+    },
+    {
+      "id": "job-5",
+      "jobTitle": "Principal Frontend Architect, Merchant Experience",
+      "company": "Shopify",
+      "description": "Drive the next-generation web performance for millions of merchants. Deep mastery in React, Next.js, TypeScript, Tailwind CSS, System Design, and REST APIs. Champion modern frontend development and cross-team Technical Leadership.",
+      "location": "Toronto, ON (Remote)",
+      "industry": "E-commerce",
+      "sourceUrl": "https://www.shopify.com/careers/principal-frontend",
+      "sourceId": "src-5",
+      "postedDate": "2026-11-02T10:00:00Z",
+      "crawledDate": "2026-11-20T18:00:00Z",
+      "contentHash": "hash-shopify-001",
+      "extractedSkillsCount": 6
+    },
+    {
+      "id": "job-6",
+      "jobTitle": "Backend Platform Engineer, High Frequency Ledger",
+      "company": "Stripe",
+      "description": "Scale financial reconciliation backends. Proficiency in Go, Python, Redis, and PostgreSQL. Familiarity with Docker, Kubernetes, and reliable CI/CD Pipelines in AWS environments.",
+      "location": "Seattle, WA",
+      "industry": "Financial Services",
+      "sourceUrl": "https://careers.stripe.com/jobs/backend-ledger",
+      "sourceId": "src-1",
+      "postedDate": "2026-10-18T12:00:00Z",
+      "crawledDate": "2026-11-20T14:30:00Z",
+      "contentHash": "hash-stripe-002",
+      "extractedSkillsCount": 7
+    },
+    {
+      "id": "job-7",
+      "jobTitle": "AI Research Scientist, Agentic Workflows",
+      "company": "Anthropic",
+      "description": "Research and develop prompt steering, tool use, and multi-agent coordination. Extensive experience with Python, PyTorch, Generative AI, RAG Systems, and Machine Learning. Strong track record of technical Problem Solving.",
+      "location": "San Francisco, CA",
+      "industry": "Technology",
+      "sourceUrl": "https://boards.greenhouse.io/anthropic/jobs/ai-agentic-sci",
+      "sourceId": "src-2",
+      "postedDate": "2026-11-01T15:00:00Z",
+      "crawledDate": "2026-11-21T08:15:00Z",
+      "contentHash": "hash-anthropic-002",
+      "extractedSkillsCount": 6
+    },
+    {
+      "id": "job-8",
+      "jobTitle": "Senior DevOps & SRE Engineer",
+      "company": "Shopify",
+      "description": "Ensure 99.999% uptime during peak holiday shopping surges. You will automate Kubernetes clusters, AWS cloud topology, Docker container orchestration, and CI/CD Pipelines. Deep experience with System Design and Go.",
+      "location": "Ottawa, ON (Remote)",
+      "industry": "E-commerce",
+      "sourceUrl": "https://www.shopify.com/careers/senior-devops",
+      "sourceId": "src-5",
+      "postedDate": "2026-10-28T09:00:00Z",
+      "crawledDate": "2026-11-20T18:00:00Z",
+      "contentHash": "hash-shopify-002",
+      "extractedSkillsCount": 7
+    },
+    {
+      "id": "job-9",
+      "jobTitle": "Enterprise Technology Strategy Consultant",
+      "company": "McKinsey & Company",
+      "description": "Advise C-level executives on modernizing legacy technology stacks and moving away from On-premise Virtualization to AWS and Google Cloud. Lead Agile & Scrum teams, provide Technical Leadership, and navigate legacy migrations from Legacy PHP.",
+      "location": "Chicago, IL",
+      "industry": "Consulting",
+      "sourceUrl": "https://careers.mckinsey.com/technology/enterprise-strategy",
+      "sourceId": "src-3",
+      "postedDate": "2026-08-15T11:00:00Z",
+      "crawledDate": "2026-11-19T16:45:00Z",
+      "contentHash": "hash-mckinsey-002",
+      "extractedSkillsCount": 6
+    },
+    {
+      "id": "job-10",
+      "jobTitle": "Clinical Workflow Integration Specialist",
+      "company": "Optum",
+      "description": "Integrate hospital EHR systems with our cloud APIs. Requires REST APIs, PostgreSQL, Docker, HIPAA Compliance, and strong Cross-functional Collaboration. Working with legacy modules previously built in AngularJS (1.x) to migrate them to modern React.",
+      "location": "Minneapolis, MN",
+      "industry": "Healthcare",
+      "sourceUrl": "https://optum.wd1.myworkdayjobs.com/Careers/clinical-integrations",
+      "sourceId": "src-4",
+      "postedDate": "2026-09-01T13:30:00Z",
+      "crawledDate": "2026-11-18T11:20:00Z",
+      "contentHash": "hash-optum-002",
+      "extractedSkillsCount": 6
+    }
+  ],
+  "skills": [
+    {
+      "id": "sk-1",
+      "name": "Python",
+      "normalizedName": "Python",
+      "category": "Programming Languages"
+    },
+    {
+      "id": "sk-2",
+      "name": "TypeScript",
+      "normalizedName": "TypeScript",
+      "category": "Programming Languages"
+    },
+    {
+      "id": "sk-3",
+      "name": "JavaScript",
+      "normalizedName": "JavaScript",
+      "category": "Programming Languages"
+    },
+    {
+      "id": "sk-4",
+      "name": "Go",
+      "normalizedName": "Go",
+      "category": "Programming Languages"
+    },
+    {
+      "id": "sk-5",
+      "name": "React",
+      "normalizedName": "React",
+      "category": "Frameworks & Libraries"
+    },
+    {
+      "id": "sk-6",
+      "name": "Next.js",
+      "normalizedName": "Next.js",
+      "category": "Frameworks & Libraries"
+    },
+    {
+      "id": "sk-7",
+      "name": "Node.js",
+      "normalizedName": "Node.js",
+      "category": "Frameworks & Libraries"
+    },
+    {
+      "id": "sk-8",
+      "name": "FastAPI",
+      "normalizedName": "FastAPI",
+      "category": "Frameworks & Libraries"
+    },
+    {
+      "id": "sk-9",
+      "name": "AWS",
+      "normalizedName": "AWS",
+      "category": "Cloud Technologies"
+    },
+    {
+      "id": "sk-10",
+      "name": "Kubernetes",
+      "normalizedName": "Kubernetes",
+      "category": "Cloud Technologies"
+    },
+    {
+      "id": "sk-11",
+      "name": "Docker",
+      "normalizedName": "Docker",
+      "category": "Cloud Technologies"
+    },
+    {
+      "id": "sk-12",
+      "name": "Google Cloud",
+      "normalizedName": "Google Cloud",
+      "category": "Cloud Technologies"
+    },
+    {
+      "id": "sk-13",
+      "name": "PostgreSQL",
+      "normalizedName": "PostgreSQL",
+      "category": "Databases"
+    },
+    {
+      "id": "sk-14",
+      "name": "MongoDB",
+      "normalizedName": "MongoDB",
+      "category": "Databases"
+    },
+    {
+      "id": "sk-15",
+      "name": "Redis",
+      "normalizedName": "Redis",
+      "category": "Databases"
+    },
+    {
+      "id": "sk-16",
+      "name": "Generative AI",
+      "normalizedName": "Generative AI",
+      "category": "AI & Machine Learning"
+    },
+    {
+      "id": "sk-17",
+      "name": "Machine Learning",
+      "normalizedName": "Machine Learning",
+      "category": "AI & Machine Learning"
+    },
+    {
+      "id": "sk-18",
+      "name": "PyTorch",
+      "normalizedName": "PyTorch",
+      "category": "AI & Machine Learning"
+    },
+    {
+      "id": "sk-19",
+      "name": "RAG Systems",
+      "normalizedName": "RAG Systems",
+      "category": "AI & Machine Learning"
+    },
+    {
+      "id": "sk-20",
+      "name": "System Design",
+      "normalizedName": "System Design",
+      "category": "Technical Skills"
+    },
+    {
+      "id": "sk-21",
+      "name": "CI/CD Pipelines",
+      "normalizedName": "CI/CD Pipelines",
+      "category": "Technical Skills"
+    },
+    {
+      "id": "sk-22",
+      "name": "REST APIs",
+      "normalizedName": "REST APIs",
+      "category": "Technical Skills"
+    },
+    {
+      "id": "sk-23",
+      "name": "Cross-functional Collaboration",
+      "normalizedName": "Cross-functional Collaboration",
+      "category": "Soft Skills"
+    },
+    {
+      "id": "sk-24",
+      "name": "Problem Solving",
+      "normalizedName": "Problem Solving",
+      "category": "Soft Skills"
+    },
+    {
+      "id": "sk-25",
+      "name": "Agile & Scrum",
+      "normalizedName": "Agile & Scrum",
+      "category": "Management & Leadership"
+    },
+    {
+      "id": "sk-26",
+      "name": "Technical Leadership",
+      "normalizedName": "Technical Leadership",
+      "category": "Management & Leadership"
+    },
+    {
+      "id": "sk-27",
+      "name": "Payment Systems",
+      "normalizedName": "Payment Systems",
+      "category": "Domain-Specific"
+    },
+    {
+      "id": "sk-28",
+      "name": "HIPAA Compliance",
+      "normalizedName": "HIPAA Compliance",
+      "category": "Domain-Specific"
+    },
+    {
+      "id": "sk-29",
+      "name": "Legacy PHP",
+      "normalizedName": "Legacy PHP",
+      "category": "Programming Languages"
+    },
+    {
+      "id": "sk-30",
+      "name": "AngularJS (1.x)",
+      "normalizedName": "AngularJS (1.x)",
+      "category": "Frameworks & Libraries"
+    },
+    {
+      "id": "sk-31",
+      "name": "On-premise Virtualization",
+      "normalizedName": "On-premise Virtualization",
+      "category": "Cloud Technologies"
+    }
+  ],
+  "jobSkills": [
+    {
+      "id": "js-job-1-sk-2",
+      "jobId": "job-1",
+      "skillId": "sk-2",
+      "skillName": "TypeScript",
+      "normalizedName": "TypeScript",
+      "category": "Programming Languages",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T14:30:00Z",
+      "jobTitle": "Senior Full Stack Engineer, Payments Platform",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-job-1-sk-5",
+      "jobId": "job-1",
+      "skillId": "sk-5",
+      "skillName": "React",
+      "normalizedName": "React",
+      "category": "Frameworks & Libraries",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T14:30:00Z",
+      "jobTitle": "Senior Full Stack Engineer, Payments Platform",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-job-1-sk-7",
+      "jobId": "job-1",
+      "skillId": "sk-7",
+      "skillName": "Node.js",
+      "normalizedName": "Node.js",
+      "category": "Frameworks & Libraries",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T14:30:00Z",
+      "jobTitle": "Senior Full Stack Engineer, Payments Platform",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-job-1-sk-9",
+      "jobId": "job-1",
+      "skillId": "sk-9",
+      "skillName": "AWS",
+      "normalizedName": "AWS",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T14:30:00Z",
+      "jobTitle": "Senior Full Stack Engineer, Payments Platform",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-job-1-sk-13",
+      "jobId": "job-1",
+      "skillId": "sk-13",
+      "skillName": "PostgreSQL",
+      "normalizedName": "PostgreSQL",
+      "category": "Databases",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T14:30:00Z",
+      "jobTitle": "Senior Full Stack Engineer, Payments Platform",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-job-1-sk-22",
+      "jobId": "job-1",
+      "skillId": "sk-22",
+      "skillName": "REST APIs",
+      "normalizedName": "REST APIs",
+      "category": "Technical Skills",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T14:30:00Z",
+      "jobTitle": "Senior Full Stack Engineer, Payments Platform",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-job-1-sk-27",
+      "jobId": "job-1",
+      "skillId": "sk-27",
+      "skillName": "Payment Systems",
+      "normalizedName": "Payment Systems",
+      "category": "Domain-Specific",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T14:30:00Z",
+      "jobTitle": "Senior Full Stack Engineer, Payments Platform",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-job-2-sk-1",
+      "jobId": "job-2",
+      "skillId": "sk-1",
+      "skillName": "Python",
+      "normalizedName": "Python",
+      "category": "Programming Languages",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T08:15:00Z",
+      "jobTitle": "Staff AI Infrastructure Engineer",
+      "company": "Anthropic",
+      "industry": "Technology"
+    },
+    {
+      "id": "js-job-2-sk-9",
+      "jobId": "job-2",
+      "skillId": "sk-9",
+      "skillName": "AWS",
+      "normalizedName": "AWS",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T08:15:00Z",
+      "jobTitle": "Staff AI Infrastructure Engineer",
+      "company": "Anthropic",
+      "industry": "Technology"
+    },
+    {
+      "id": "js-job-2-sk-10",
+      "jobId": "job-2",
+      "skillId": "sk-10",
+      "skillName": "Kubernetes",
+      "normalizedName": "Kubernetes",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T08:15:00Z",
+      "jobTitle": "Staff AI Infrastructure Engineer",
+      "company": "Anthropic",
+      "industry": "Technology"
+    },
+    {
+      "id": "js-job-2-sk-11",
+      "jobId": "job-2",
+      "skillId": "sk-11",
+      "skillName": "Docker",
+      "normalizedName": "Docker",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T08:15:00Z",
+      "jobTitle": "Staff AI Infrastructure Engineer",
+      "company": "Anthropic",
+      "industry": "Technology"
+    },
+    {
+      "id": "js-job-2-sk-12",
+      "jobId": "job-2",
+      "skillId": "sk-12",
+      "skillName": "Google Cloud",
+      "normalizedName": "Google Cloud",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T08:15:00Z",
+      "jobTitle": "Staff AI Infrastructure Engineer",
+      "company": "Anthropic",
+      "industry": "Technology"
+    },
+    {
+      "id": "js-job-2-sk-16",
+      "jobId": "job-2",
+      "skillId": "sk-16",
+      "skillName": "Generative AI",
+      "normalizedName": "Generative AI",
+      "category": "AI & Machine Learning",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T08:15:00Z",
+      "jobTitle": "Staff AI Infrastructure Engineer",
+      "company": "Anthropic",
+      "industry": "Technology"
+    },
+    {
+      "id": "js-job-2-sk-18",
+      "jobId": "job-2",
+      "skillId": "sk-18",
+      "skillName": "PyTorch",
+      "normalizedName": "PyTorch",
+      "category": "AI & Machine Learning",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T08:15:00Z",
+      "jobTitle": "Staff AI Infrastructure Engineer",
+      "company": "Anthropic",
+      "industry": "Technology"
+    },
+    {
+      "id": "js-job-2-sk-19",
+      "jobId": "job-2",
+      "skillId": "sk-19",
+      "skillName": "RAG Systems",
+      "normalizedName": "RAG Systems",
+      "category": "AI & Machine Learning",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T08:15:00Z",
+      "jobTitle": "Staff AI Infrastructure Engineer",
+      "company": "Anthropic",
+      "industry": "Technology"
+    },
+    {
+      "id": "js-job-2-sk-26",
+      "jobId": "job-2",
+      "skillId": "sk-26",
+      "skillName": "Technical Leadership",
+      "normalizedName": "Technical Leadership",
+      "category": "Management & Leadership",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T08:15:00Z",
+      "jobTitle": "Staff AI Infrastructure Engineer",
+      "company": "Anthropic",
+      "industry": "Technology"
+    },
+    {
+      "id": "js-job-3-sk-9",
+      "jobId": "job-3",
+      "skillId": "sk-9",
+      "skillName": "AWS",
+      "normalizedName": "AWS",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-19T16:45:00Z",
+      "jobTitle": "Senior Cloud Architect & Digital Transformation Lead",
+      "company": "McKinsey & Company",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-job-3-sk-10",
+      "jobId": "job-3",
+      "skillId": "sk-10",
+      "skillName": "Kubernetes",
+      "normalizedName": "Kubernetes",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-19T16:45:00Z",
+      "jobTitle": "Senior Cloud Architect & Digital Transformation Lead",
+      "company": "McKinsey & Company",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-job-3-sk-12",
+      "jobId": "job-3",
+      "skillId": "sk-12",
+      "skillName": "Google Cloud",
+      "normalizedName": "Google Cloud",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-19T16:45:00Z",
+      "jobTitle": "Senior Cloud Architect & Digital Transformation Lead",
+      "company": "McKinsey & Company",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-job-3-sk-21",
+      "jobId": "job-3",
+      "skillId": "sk-21",
+      "skillName": "CI/CD Pipelines",
+      "normalizedName": "CI/CD Pipelines",
+      "category": "Technical Skills",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-19T16:45:00Z",
+      "jobTitle": "Senior Cloud Architect & Digital Transformation Lead",
+      "company": "McKinsey & Company",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-job-3-sk-23",
+      "jobId": "job-3",
+      "skillId": "sk-23",
+      "skillName": "Cross-functional Collaboration",
+      "normalizedName": "Cross-functional Collaboration",
+      "category": "Soft Skills",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-19T16:45:00Z",
+      "jobTitle": "Senior Cloud Architect & Digital Transformation Lead",
+      "company": "McKinsey & Company",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-job-3-sk-24",
+      "jobId": "job-3",
+      "skillId": "sk-24",
+      "skillName": "Problem Solving",
+      "normalizedName": "Problem Solving",
+      "category": "Soft Skills",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-19T16:45:00Z",
+      "jobTitle": "Senior Cloud Architect & Digital Transformation Lead",
+      "company": "McKinsey & Company",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-job-3-sk-25",
+      "jobId": "job-3",
+      "skillId": "sk-25",
+      "skillName": "Agile & Scrum",
+      "normalizedName": "Agile & Scrum",
+      "category": "Management & Leadership",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-19T16:45:00Z",
+      "jobTitle": "Senior Cloud Architect & Digital Transformation Lead",
+      "company": "McKinsey & Company",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-job-4-sk-1",
+      "jobId": "job-4",
+      "skillId": "sk-1",
+      "skillName": "Python",
+      "normalizedName": "Python",
+      "category": "Programming Languages",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-18T11:20:00Z",
+      "jobTitle": "Lead Healthcare Data Engineer (ML/AI)",
+      "company": "Optum",
+      "industry": "Healthcare"
+    },
+    {
+      "id": "js-job-4-sk-8",
+      "jobId": "job-4",
+      "skillId": "sk-8",
+      "skillName": "FastAPI",
+      "normalizedName": "FastAPI",
+      "category": "Frameworks & Libraries",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-18T11:20:00Z",
+      "jobTitle": "Lead Healthcare Data Engineer (ML/AI)",
+      "company": "Optum",
+      "industry": "Healthcare"
+    },
+    {
+      "id": "js-job-4-sk-13",
+      "jobId": "job-4",
+      "skillId": "sk-13",
+      "skillName": "PostgreSQL",
+      "normalizedName": "PostgreSQL",
+      "category": "Databases",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-18T11:20:00Z",
+      "jobTitle": "Lead Healthcare Data Engineer (ML/AI)",
+      "company": "Optum",
+      "industry": "Healthcare"
+    },
+    {
+      "id": "js-job-4-sk-14",
+      "jobId": "job-4",
+      "skillId": "sk-14",
+      "skillName": "MongoDB",
+      "normalizedName": "MongoDB",
+      "category": "Databases",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-18T11:20:00Z",
+      "jobTitle": "Lead Healthcare Data Engineer (ML/AI)",
+      "company": "Optum",
+      "industry": "Healthcare"
+    },
+    {
+      "id": "js-job-4-sk-17",
+      "jobId": "job-4",
+      "skillId": "sk-17",
+      "skillName": "Machine Learning",
+      "normalizedName": "Machine Learning",
+      "category": "AI & Machine Learning",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-18T11:20:00Z",
+      "jobTitle": "Lead Healthcare Data Engineer (ML/AI)",
+      "company": "Optum",
+      "industry": "Healthcare"
+    },
+    {
+      "id": "js-job-4-sk-19",
+      "jobId": "job-4",
+      "skillId": "sk-19",
+      "skillName": "RAG Systems",
+      "normalizedName": "RAG Systems",
+      "category": "AI & Machine Learning",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-18T11:20:00Z",
+      "jobTitle": "Lead Healthcare Data Engineer (ML/AI)",
+      "company": "Optum",
+      "industry": "Healthcare"
+    },
+    {
+      "id": "js-job-4-sk-28",
+      "jobId": "job-4",
+      "skillId": "sk-28",
+      "skillName": "HIPAA Compliance",
+      "normalizedName": "HIPAA Compliance",
+      "category": "Domain-Specific",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-18T11:20:00Z",
+      "jobTitle": "Lead Healthcare Data Engineer (ML/AI)",
+      "company": "Optum",
+      "industry": "Healthcare"
+    },
+    {
+      "id": "js-job-5-sk-2",
+      "jobId": "job-5",
+      "skillId": "sk-2",
+      "skillName": "TypeScript",
+      "normalizedName": "TypeScript",
+      "category": "Programming Languages",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T18:00:00Z",
+      "jobTitle": "Principal Frontend Architect, Merchant Experience",
+      "company": "Shopify",
+      "industry": "E-commerce"
+    },
+    {
+      "id": "js-job-5-sk-5",
+      "jobId": "job-5",
+      "skillId": "sk-5",
+      "skillName": "React",
+      "normalizedName": "React",
+      "category": "Frameworks & Libraries",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T18:00:00Z",
+      "jobTitle": "Principal Frontend Architect, Merchant Experience",
+      "company": "Shopify",
+      "industry": "E-commerce"
+    },
+    {
+      "id": "js-job-5-sk-6",
+      "jobId": "job-5",
+      "skillId": "sk-6",
+      "skillName": "Next.js",
+      "normalizedName": "Next.js",
+      "category": "Frameworks & Libraries",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T18:00:00Z",
+      "jobTitle": "Principal Frontend Architect, Merchant Experience",
+      "company": "Shopify",
+      "industry": "E-commerce"
+    },
+    {
+      "id": "js-job-5-sk-20",
+      "jobId": "job-5",
+      "skillId": "sk-20",
+      "skillName": "System Design",
+      "normalizedName": "System Design",
+      "category": "Technical Skills",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T18:00:00Z",
+      "jobTitle": "Principal Frontend Architect, Merchant Experience",
+      "company": "Shopify",
+      "industry": "E-commerce"
+    },
+    {
+      "id": "js-job-5-sk-22",
+      "jobId": "job-5",
+      "skillId": "sk-22",
+      "skillName": "REST APIs",
+      "normalizedName": "REST APIs",
+      "category": "Technical Skills",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T18:00:00Z",
+      "jobTitle": "Principal Frontend Architect, Merchant Experience",
+      "company": "Shopify",
+      "industry": "E-commerce"
+    },
+    {
+      "id": "js-job-5-sk-26",
+      "jobId": "job-5",
+      "skillId": "sk-26",
+      "skillName": "Technical Leadership",
+      "normalizedName": "Technical Leadership",
+      "category": "Management & Leadership",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T18:00:00Z",
+      "jobTitle": "Principal Frontend Architect, Merchant Experience",
+      "company": "Shopify",
+      "industry": "E-commerce"
+    },
+    {
+      "id": "js-job-6-sk-1",
+      "jobId": "job-6",
+      "skillId": "sk-1",
+      "skillName": "Python",
+      "normalizedName": "Python",
+      "category": "Programming Languages",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T14:30:00Z",
+      "jobTitle": "Backend Platform Engineer, High Frequency Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-job-6-sk-4",
+      "jobId": "job-6",
+      "skillId": "sk-4",
+      "skillName": "Go",
+      "normalizedName": "Go",
+      "category": "Programming Languages",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T14:30:00Z",
+      "jobTitle": "Backend Platform Engineer, High Frequency Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-job-6-sk-9",
+      "jobId": "job-6",
+      "skillId": "sk-9",
+      "skillName": "AWS",
+      "normalizedName": "AWS",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T14:30:00Z",
+      "jobTitle": "Backend Platform Engineer, High Frequency Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-job-6-sk-10",
+      "jobId": "job-6",
+      "skillId": "sk-10",
+      "skillName": "Kubernetes",
+      "normalizedName": "Kubernetes",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T14:30:00Z",
+      "jobTitle": "Backend Platform Engineer, High Frequency Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-job-6-sk-11",
+      "jobId": "job-6",
+      "skillId": "sk-11",
+      "skillName": "Docker",
+      "normalizedName": "Docker",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T14:30:00Z",
+      "jobTitle": "Backend Platform Engineer, High Frequency Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-job-6-sk-13",
+      "jobId": "job-6",
+      "skillId": "sk-13",
+      "skillName": "PostgreSQL",
+      "normalizedName": "PostgreSQL",
+      "category": "Databases",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T14:30:00Z",
+      "jobTitle": "Backend Platform Engineer, High Frequency Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-job-6-sk-15",
+      "jobId": "job-6",
+      "skillId": "sk-15",
+      "skillName": "Redis",
+      "normalizedName": "Redis",
+      "category": "Databases",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T14:30:00Z",
+      "jobTitle": "Backend Platform Engineer, High Frequency Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-job-6-sk-21",
+      "jobId": "job-6",
+      "skillId": "sk-21",
+      "skillName": "CI/CD Pipelines",
+      "normalizedName": "CI/CD Pipelines",
+      "category": "Technical Skills",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T14:30:00Z",
+      "jobTitle": "Backend Platform Engineer, High Frequency Ledger",
+      "company": "Stripe",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "js-job-7-sk-1",
+      "jobId": "job-7",
+      "skillId": "sk-1",
+      "skillName": "Python",
+      "normalizedName": "Python",
+      "category": "Programming Languages",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T08:15:00Z",
+      "jobTitle": "AI Research Scientist, Agentic Workflows",
+      "company": "Anthropic",
+      "industry": "Technology"
+    },
+    {
+      "id": "js-job-7-sk-16",
+      "jobId": "job-7",
+      "skillId": "sk-16",
+      "skillName": "Generative AI",
+      "normalizedName": "Generative AI",
+      "category": "AI & Machine Learning",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T08:15:00Z",
+      "jobTitle": "AI Research Scientist, Agentic Workflows",
+      "company": "Anthropic",
+      "industry": "Technology"
+    },
+    {
+      "id": "js-job-7-sk-17",
+      "jobId": "job-7",
+      "skillId": "sk-17",
+      "skillName": "Machine Learning",
+      "normalizedName": "Machine Learning",
+      "category": "AI & Machine Learning",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T08:15:00Z",
+      "jobTitle": "AI Research Scientist, Agentic Workflows",
+      "company": "Anthropic",
+      "industry": "Technology"
+    },
+    {
+      "id": "js-job-7-sk-18",
+      "jobId": "job-7",
+      "skillId": "sk-18",
+      "skillName": "PyTorch",
+      "normalizedName": "PyTorch",
+      "category": "AI & Machine Learning",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T08:15:00Z",
+      "jobTitle": "AI Research Scientist, Agentic Workflows",
+      "company": "Anthropic",
+      "industry": "Technology"
+    },
+    {
+      "id": "js-job-7-sk-19",
+      "jobId": "job-7",
+      "skillId": "sk-19",
+      "skillName": "RAG Systems",
+      "normalizedName": "RAG Systems",
+      "category": "AI & Machine Learning",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T08:15:00Z",
+      "jobTitle": "AI Research Scientist, Agentic Workflows",
+      "company": "Anthropic",
+      "industry": "Technology"
+    },
+    {
+      "id": "js-job-7-sk-24",
+      "jobId": "job-7",
+      "skillId": "sk-24",
+      "skillName": "Problem Solving",
+      "normalizedName": "Problem Solving",
+      "category": "Soft Skills",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-21T08:15:00Z",
+      "jobTitle": "AI Research Scientist, Agentic Workflows",
+      "company": "Anthropic",
+      "industry": "Technology"
+    },
+    {
+      "id": "js-job-8-sk-4",
+      "jobId": "job-8",
+      "skillId": "sk-4",
+      "skillName": "Go",
+      "normalizedName": "Go",
+      "category": "Programming Languages",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T18:00:00Z",
+      "jobTitle": "Senior DevOps & SRE Engineer",
+      "company": "Shopify",
+      "industry": "E-commerce"
+    },
+    {
+      "id": "js-job-8-sk-9",
+      "jobId": "job-8",
+      "skillId": "sk-9",
+      "skillName": "AWS",
+      "normalizedName": "AWS",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T18:00:00Z",
+      "jobTitle": "Senior DevOps & SRE Engineer",
+      "company": "Shopify",
+      "industry": "E-commerce"
+    },
+    {
+      "id": "js-job-8-sk-10",
+      "jobId": "job-8",
+      "skillId": "sk-10",
+      "skillName": "Kubernetes",
+      "normalizedName": "Kubernetes",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T18:00:00Z",
+      "jobTitle": "Senior DevOps & SRE Engineer",
+      "company": "Shopify",
+      "industry": "E-commerce"
+    },
+    {
+      "id": "js-job-8-sk-11",
+      "jobId": "job-8",
+      "skillId": "sk-11",
+      "skillName": "Docker",
+      "normalizedName": "Docker",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T18:00:00Z",
+      "jobTitle": "Senior DevOps & SRE Engineer",
+      "company": "Shopify",
+      "industry": "E-commerce"
+    },
+    {
+      "id": "js-job-8-sk-20",
+      "jobId": "job-8",
+      "skillId": "sk-20",
+      "skillName": "System Design",
+      "normalizedName": "System Design",
+      "category": "Technical Skills",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T18:00:00Z",
+      "jobTitle": "Senior DevOps & SRE Engineer",
+      "company": "Shopify",
+      "industry": "E-commerce"
+    },
+    {
+      "id": "js-job-8-sk-21",
+      "jobId": "job-8",
+      "skillId": "sk-21",
+      "skillName": "CI/CD Pipelines",
+      "normalizedName": "CI/CD Pipelines",
+      "category": "Technical Skills",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-20T18:00:00Z",
+      "jobTitle": "Senior DevOps & SRE Engineer",
+      "company": "Shopify",
+      "industry": "E-commerce"
+    },
+    {
+      "id": "js-job-9-sk-9",
+      "jobId": "job-9",
+      "skillId": "sk-9",
+      "skillName": "AWS",
+      "normalizedName": "AWS",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-19T16:45:00Z",
+      "jobTitle": "Enterprise Technology Strategy Consultant",
+      "company": "McKinsey & Company",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-job-9-sk-12",
+      "jobId": "job-9",
+      "skillId": "sk-12",
+      "skillName": "Google Cloud",
+      "normalizedName": "Google Cloud",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-19T16:45:00Z",
+      "jobTitle": "Enterprise Technology Strategy Consultant",
+      "company": "McKinsey & Company",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-job-9-sk-25",
+      "jobId": "job-9",
+      "skillId": "sk-25",
+      "skillName": "Agile & Scrum",
+      "normalizedName": "Agile & Scrum",
+      "category": "Management & Leadership",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-19T16:45:00Z",
+      "jobTitle": "Enterprise Technology Strategy Consultant",
+      "company": "McKinsey & Company",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-job-9-sk-26",
+      "jobId": "job-9",
+      "skillId": "sk-26",
+      "skillName": "Technical Leadership",
+      "normalizedName": "Technical Leadership",
+      "category": "Management & Leadership",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-19T16:45:00Z",
+      "jobTitle": "Enterprise Technology Strategy Consultant",
+      "company": "McKinsey & Company",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-job-9-sk-29",
+      "jobId": "job-9",
+      "skillId": "sk-29",
+      "skillName": "Legacy PHP",
+      "normalizedName": "Legacy PHP",
+      "category": "Programming Languages",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-19T16:45:00Z",
+      "jobTitle": "Enterprise Technology Strategy Consultant",
+      "company": "McKinsey & Company",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-job-9-sk-31",
+      "jobId": "job-9",
+      "skillId": "sk-31",
+      "skillName": "On-premise Virtualization",
+      "normalizedName": "On-premise Virtualization",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-19T16:45:00Z",
+      "jobTitle": "Enterprise Technology Strategy Consultant",
+      "company": "McKinsey & Company",
+      "industry": "Consulting"
+    },
+    {
+      "id": "js-job-10-sk-5",
+      "jobId": "job-10",
+      "skillId": "sk-5",
+      "skillName": "React",
+      "normalizedName": "React",
+      "category": "Frameworks & Libraries",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-18T11:20:00Z",
+      "jobTitle": "Clinical Workflow Integration Specialist",
+      "company": "Optum",
+      "industry": "Healthcare"
+    },
+    {
+      "id": "js-job-10-sk-11",
+      "jobId": "job-10",
+      "skillId": "sk-11",
+      "skillName": "Docker",
+      "normalizedName": "Docker",
+      "category": "Cloud Technologies",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-18T11:20:00Z",
+      "jobTitle": "Clinical Workflow Integration Specialist",
+      "company": "Optum",
+      "industry": "Healthcare"
+    },
+    {
+      "id": "js-job-10-sk-13",
+      "jobId": "job-10",
+      "skillId": "sk-13",
+      "skillName": "PostgreSQL",
+      "normalizedName": "PostgreSQL",
+      "category": "Databases",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-18T11:20:00Z",
+      "jobTitle": "Clinical Workflow Integration Specialist",
+      "company": "Optum",
+      "industry": "Healthcare"
+    },
+    {
+      "id": "js-job-10-sk-22",
+      "jobId": "job-10",
+      "skillId": "sk-22",
+      "skillName": "REST APIs",
+      "normalizedName": "REST APIs",
+      "category": "Technical Skills",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-18T11:20:00Z",
+      "jobTitle": "Clinical Workflow Integration Specialist",
+      "company": "Optum",
+      "industry": "Healthcare"
+    },
+    {
+      "id": "js-job-10-sk-23",
+      "jobId": "job-10",
+      "skillId": "sk-23",
+      "skillName": "Cross-functional Collaboration",
+      "normalizedName": "Cross-functional Collaboration",
+      "category": "Soft Skills",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-18T11:20:00Z",
+      "jobTitle": "Clinical Workflow Integration Specialist",
+      "company": "Optum",
+      "industry": "Healthcare"
+    },
+    {
+      "id": "js-job-10-sk-28",
+      "jobId": "job-10",
+      "skillId": "sk-28",
+      "skillName": "HIPAA Compliance",
+      "normalizedName": "HIPAA Compliance",
+      "category": "Domain-Specific",
+      "extractionConfidence": 0.95,
+      "extractionDate": "2026-11-18T11:20:00Z",
+      "jobTitle": "Clinical Workflow Integration Specialist",
+      "company": "Optum",
+      "industry": "Healthcare"
+    }
+  ],
+  "snapshots": [
+    {
+      "id": "snap-genai-q1",
+      "skillId": "sk-16",
+      "skillName": "Generative AI",
+      "normalizedName": "Generative AI",
+      "category": "AI & Machine Learning",
+      "timePeriod": "2026-Q1",
+      "mentionCount": 18,
+      "uniqueJobCount": 18,
+      "demandPercentage": 20,
+      "industryBreakdown": {
+        "Technology": 12,
+        "Financial Services": 3,
+        "Consulting": 3
+      },
+      "calculatedDate": "2026-03-31T23:59:59Z"
+    },
+    {
+      "id": "snap-genai-q2",
+      "skillId": "sk-16",
+      "skillName": "Generative AI",
+      "normalizedName": "Generative AI",
+      "category": "AI & Machine Learning",
+      "timePeriod": "2026-Q2",
+      "mentionCount": 32,
+      "uniqueJobCount": 32,
+      "demandPercentage": 35.5,
+      "industryBreakdown": {
+        "Technology": 20,
+        "Financial Services": 6,
+        "Consulting": 4,
+        "Healthcare": 2
+      },
+      "calculatedDate": "2026-06-30T23:59:59Z"
+    },
+    {
+      "id": "snap-genai-q3",
+      "skillId": "sk-16",
+      "skillName": "Generative AI",
+      "normalizedName": "Generative AI",
+      "category": "AI & Machine Learning",
+      "timePeriod": "2026-Q3",
+      "mentionCount": 46,
+      "uniqueJobCount": 46,
+      "demandPercentage": 51.1,
+      "industryBreakdown": {
+        "Technology": 26,
+        "Financial Services": 9,
+        "Consulting": 6,
+        "Healthcare": 3,
+        "E-commerce": 2
+      },
+      "calculatedDate": "2026-09-30T23:59:59Z"
+    },
+    {
+      "id": "snap-genai-q4",
+      "skillId": "sk-16",
+      "skillName": "Generative AI",
+      "normalizedName": "Generative AI",
+      "category": "AI & Machine Learning",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 62,
+      "uniqueJobCount": 62,
+      "demandPercentage": 68.8,
+      "industryBreakdown": {
+        "Technology": 33,
+        "Financial Services": 14,
+        "Consulting": 7,
+        "Healthcare": 4,
+        "E-commerce": 4
+      },
+      "calculatedDate": "2026-11-20T23:59:59Z"
+    },
+    {
+      "id": "snap-py-q1",
+      "skillId": "sk-1",
+      "skillName": "Python",
+      "normalizedName": "Python",
+      "category": "Programming Languages",
+      "timePeriod": "2026-Q1",
+      "mentionCount": 48,
+      "uniqueJobCount": 48,
+      "demandPercentage": 53.3,
+      "industryBreakdown": {
+        "Technology": 28,
+        "Financial Services": 10,
+        "Healthcare": 5,
+        "Consulting": 5
+      },
+      "calculatedDate": "2026-03-31T23:59:59Z"
+    },
+    {
+      "id": "snap-py-q2",
+      "skillId": "sk-1",
+      "skillName": "Python",
+      "normalizedName": "Python",
+      "category": "Programming Languages",
+      "timePeriod": "2026-Q2",
+      "mentionCount": 54,
+      "uniqueJobCount": 54,
+      "demandPercentage": 60,
+      "industryBreakdown": {
+        "Technology": 30,
+        "Financial Services": 12,
+        "Healthcare": 6,
+        "Consulting": 6
+      },
+      "calculatedDate": "2026-06-30T23:59:59Z"
+    },
+    {
+      "id": "snap-py-q3",
+      "skillId": "sk-1",
+      "skillName": "Python",
+      "normalizedName": "Python",
+      "category": "Programming Languages",
+      "timePeriod": "2026-Q3",
+      "mentionCount": 61,
+      "uniqueJobCount": 61,
+      "demandPercentage": 67.7,
+      "industryBreakdown": {
+        "Technology": 34,
+        "Financial Services": 14,
+        "Healthcare": 7,
+        "Consulting": 6
+      },
+      "calculatedDate": "2026-09-30T23:59:59Z"
+    },
+    {
+      "id": "snap-py-q4",
+      "skillId": "sk-1",
+      "skillName": "Python",
+      "normalizedName": "Python",
+      "category": "Programming Languages",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 68,
+      "uniqueJobCount": 68,
+      "demandPercentage": 75.5,
+      "industryBreakdown": {
+        "Technology": 38,
+        "Financial Services": 16,
+        "Healthcare": 7,
+        "Consulting": 7
+      },
+      "calculatedDate": "2026-11-20T23:59:59Z"
+    },
+    {
+      "id": "snap-ts-q1",
+      "skillId": "sk-2",
+      "skillName": "TypeScript",
+      "normalizedName": "TypeScript",
+      "category": "Programming Languages",
+      "timePeriod": "2026-Q1",
+      "mentionCount": 45,
+      "uniqueJobCount": 45,
+      "demandPercentage": 50,
+      "industryBreakdown": {
+        "Technology": 25,
+        "E-commerce": 12,
+        "Financial Services": 8
+      },
+      "calculatedDate": "2026-03-31T23:59:59Z"
+    },
+    {
+      "id": "snap-ts-q2",
+      "skillId": "sk-2",
+      "skillName": "TypeScript",
+      "normalizedName": "TypeScript",
+      "category": "Programming Languages",
+      "timePeriod": "2026-Q2",
+      "mentionCount": 50,
+      "uniqueJobCount": 50,
+      "demandPercentage": 55.5,
+      "industryBreakdown": {
+        "Technology": 27,
+        "E-commerce": 14,
+        "Financial Services": 9
+      },
+      "calculatedDate": "2026-06-30T23:59:59Z"
+    },
+    {
+      "id": "snap-ts-q3",
+      "skillId": "sk-2",
+      "skillName": "TypeScript",
+      "normalizedName": "TypeScript",
+      "category": "Programming Languages",
+      "timePeriod": "2026-Q3",
+      "mentionCount": 56,
+      "uniqueJobCount": 56,
+      "demandPercentage": 62.2,
+      "industryBreakdown": {
+        "Technology": 30,
+        "E-commerce": 16,
+        "Financial Services": 10
+      },
+      "calculatedDate": "2026-09-30T23:59:59Z"
+    },
+    {
+      "id": "snap-ts-q4",
+      "skillId": "sk-2",
+      "skillName": "TypeScript",
+      "normalizedName": "TypeScript",
+      "category": "Programming Languages",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 61,
+      "uniqueJobCount": 61,
+      "demandPercentage": 67.7,
+      "industryBreakdown": {
+        "Technology": 33,
+        "E-commerce": 17,
+        "Financial Services": 11
+      },
+      "calculatedDate": "2026-11-20T23:59:59Z"
+    },
+    {
+      "id": "snap-aws-q1",
+      "skillId": "sk-9",
+      "skillName": "AWS",
+      "normalizedName": "AWS",
+      "category": "Cloud Technologies",
+      "timePeriod": "2026-Q1",
+      "mentionCount": 63,
+      "uniqueJobCount": 63,
+      "demandPercentage": 70,
+      "industryBreakdown": {
+        "Technology": 32,
+        "Financial Services": 15,
+        "Consulting": 10,
+        "E-commerce": 6
+      },
+      "calculatedDate": "2026-03-31T23:59:59Z"
+    },
+    {
+      "id": "snap-aws-q2",
+      "skillId": "sk-9",
+      "skillName": "AWS",
+      "normalizedName": "AWS",
+      "category": "Cloud Technologies",
+      "timePeriod": "2026-Q2",
+      "mentionCount": 64,
+      "uniqueJobCount": 64,
+      "demandPercentage": 71.1,
+      "industryBreakdown": {
+        "Technology": 33,
+        "Financial Services": 15,
+        "Consulting": 10,
+        "E-commerce": 6
+      },
+      "calculatedDate": "2026-06-30T23:59:59Z"
+    },
+    {
+      "id": "snap-aws-q3",
+      "skillId": "sk-9",
+      "skillName": "AWS",
+      "normalizedName": "AWS",
+      "category": "Cloud Technologies",
+      "timePeriod": "2026-Q3",
+      "mentionCount": 62,
+      "uniqueJobCount": 62,
+      "demandPercentage": 68.8,
+      "industryBreakdown": {
+        "Technology": 31,
+        "Financial Services": 15,
+        "Consulting": 10,
+        "E-commerce": 6
+      },
+      "calculatedDate": "2026-09-30T23:59:59Z"
+    },
+    {
+      "id": "snap-aws-q4",
+      "skillId": "sk-9",
+      "skillName": "AWS",
+      "normalizedName": "AWS",
+      "category": "Cloud Technologies",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 63,
+      "uniqueJobCount": 63,
+      "demandPercentage": 70,
+      "industryBreakdown": {
+        "Technology": 32,
+        "Financial Services": 15,
+        "Consulting": 10,
+        "E-commerce": 6
+      },
+      "calculatedDate": "2026-11-20T23:59:59Z"
+    },
+    {
+      "id": "snap-pg-q1",
+      "skillId": "sk-13",
+      "skillName": "PostgreSQL",
+      "normalizedName": "PostgreSQL",
+      "category": "Databases",
+      "timePeriod": "2026-Q1",
+      "mentionCount": 46,
+      "uniqueJobCount": 46,
+      "demandPercentage": 51.1,
+      "industryBreakdown": {
+        "Technology": 24,
+        "Financial Services": 12,
+        "E-commerce": 10
+      },
+      "calculatedDate": "2026-03-31T23:59:59Z"
+    },
+    {
+      "id": "snap-pg-q2",
+      "skillId": "sk-13",
+      "skillName": "PostgreSQL",
+      "normalizedName": "PostgreSQL",
+      "category": "Databases",
+      "timePeriod": "2026-Q2",
+      "mentionCount": 47,
+      "uniqueJobCount": 47,
+      "demandPercentage": 52.2,
+      "industryBreakdown": {
+        "Technology": 25,
+        "Financial Services": 12,
+        "E-commerce": 10
+      },
+      "calculatedDate": "2026-06-30T23:59:59Z"
+    },
+    {
+      "id": "snap-pg-q3",
+      "skillId": "sk-13",
+      "skillName": "PostgreSQL",
+      "normalizedName": "PostgreSQL",
+      "category": "Databases",
+      "timePeriod": "2026-Q3",
+      "mentionCount": 47,
+      "uniqueJobCount": 47,
+      "demandPercentage": 52.2,
+      "industryBreakdown": {
+        "Technology": 25,
+        "Financial Services": 12,
+        "E-commerce": 10
+      },
+      "calculatedDate": "2026-09-30T23:59:59Z"
+    },
+    {
+      "id": "snap-pg-q4",
+      "skillId": "sk-13",
+      "skillName": "PostgreSQL",
+      "normalizedName": "PostgreSQL",
+      "category": "Databases",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 48,
+      "uniqueJobCount": 48,
+      "demandPercentage": 53.3,
+      "industryBreakdown": {
+        "Technology": 26,
+        "Financial Services": 12,
+        "E-commerce": 10
+      },
+      "calculatedDate": "2026-11-20T23:59:59Z"
+    },
+    {
+      "id": "snap-k8s-q1",
+      "skillId": "sk-10",
+      "skillName": "Kubernetes",
+      "normalizedName": "Kubernetes",
+      "category": "Cloud Technologies",
+      "timePeriod": "2026-Q1",
+      "mentionCount": 38,
+      "uniqueJobCount": 38,
+      "demandPercentage": 42.2,
+      "industryBreakdown": {
+        "Technology": 22,
+        "Financial Services": 10,
+        "E-commerce": 6
+      },
+      "calculatedDate": "2026-03-31T23:59:59Z"
+    },
+    {
+      "id": "snap-k8s-q2",
+      "skillId": "sk-10",
+      "skillName": "Kubernetes",
+      "normalizedName": "Kubernetes",
+      "category": "Cloud Technologies",
+      "timePeriod": "2026-Q2",
+      "mentionCount": 42,
+      "uniqueJobCount": 42,
+      "demandPercentage": 46.6,
+      "industryBreakdown": {
+        "Technology": 24,
+        "Financial Services": 11,
+        "E-commerce": 7
+      },
+      "calculatedDate": "2026-06-30T23:59:59Z"
+    },
+    {
+      "id": "snap-k8s-q3",
+      "skillId": "sk-10",
+      "skillName": "Kubernetes",
+      "normalizedName": "Kubernetes",
+      "category": "Cloud Technologies",
+      "timePeriod": "2026-Q3",
+      "mentionCount": 47,
+      "uniqueJobCount": 47,
+      "demandPercentage": 52.2,
+      "industryBreakdown": {
+        "Technology": 26,
+        "Financial Services": 13,
+        "E-commerce": 8
+      },
+      "calculatedDate": "2026-09-30T23:59:59Z"
+    },
+    {
+      "id": "snap-k8s-q4",
+      "skillId": "sk-10",
+      "skillName": "Kubernetes",
+      "normalizedName": "Kubernetes",
+      "category": "Cloud Technologies",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 51,
+      "uniqueJobCount": 51,
+      "demandPercentage": 56.6,
+      "industryBreakdown": {
+        "Technology": 28,
+        "Financial Services": 14,
+        "E-commerce": 9
+      },
+      "calculatedDate": "2026-11-20T23:59:59Z"
+    },
+    {
+      "id": "snap-php-q1",
+      "skillId": "sk-29",
+      "skillName": "Legacy PHP",
+      "normalizedName": "Legacy PHP",
+      "category": "Programming Languages",
+      "timePeriod": "2026-Q1",
+      "mentionCount": 22,
+      "uniqueJobCount": 22,
+      "demandPercentage": 24.4,
+      "industryBreakdown": {
+        "E-commerce": 14,
+        "Consulting": 8
+      },
+      "calculatedDate": "2026-03-31T23:59:59Z"
+    },
+    {
+      "id": "snap-php-q2",
+      "skillId": "sk-29",
+      "skillName": "Legacy PHP",
+      "normalizedName": "Legacy PHP",
+      "category": "Programming Languages",
+      "timePeriod": "2026-Q2",
+      "mentionCount": 17,
+      "uniqueJobCount": 17,
+      "demandPercentage": 18.8,
+      "industryBreakdown": {
+        "E-commerce": 11,
+        "Consulting": 6
+      },
+      "calculatedDate": "2026-06-30T23:59:59Z"
+    },
+    {
+      "id": "snap-php-q3",
+      "skillId": "sk-29",
+      "skillName": "Legacy PHP",
+      "normalizedName": "Legacy PHP",
+      "category": "Programming Languages",
+      "timePeriod": "2026-Q3",
+      "mentionCount": 13,
+      "uniqueJobCount": 13,
+      "demandPercentage": 14.4,
+      "industryBreakdown": {
+        "E-commerce": 8,
+        "Consulting": 5
+      },
+      "calculatedDate": "2026-09-30T23:59:59Z"
+    },
+    {
+      "id": "snap-php-q4",
+      "skillId": "sk-29",
+      "skillName": "Legacy PHP",
+      "normalizedName": "Legacy PHP",
+      "category": "Programming Languages",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 9,
+      "uniqueJobCount": 9,
+      "demandPercentage": 10,
+      "industryBreakdown": {
+        "E-commerce": 5,
+        "Consulting": 4
+      },
+      "calculatedDate": "2026-11-20T23:59:59Z"
+    },
+    {
+      "id": "snap-ng1-q1",
+      "skillId": "sk-30",
+      "skillName": "AngularJS (1.x)",
+      "normalizedName": "AngularJS (1.x)",
+      "category": "Frameworks & Libraries",
+      "timePeriod": "2026-Q1",
+      "mentionCount": 16,
+      "uniqueJobCount": 16,
+      "demandPercentage": 17.7,
+      "industryBreakdown": {
+        "Healthcare": 9,
+        "Financial": 7
+      },
+      "calculatedDate": "2026-03-31T23:59:59Z"
+    },
+    {
+      "id": "snap-ng1-q2",
+      "skillId": "sk-30",
+      "skillName": "AngularJS (1.x)",
+      "normalizedName": "AngularJS (1.x)",
+      "category": "Frameworks & Libraries",
+      "timePeriod": "2026-Q2",
+      "mentionCount": 11,
+      "uniqueJobCount": 11,
+      "demandPercentage": 12.2,
+      "industryBreakdown": {
+        "Healthcare": 6,
+        "Financial": 5
+      },
+      "calculatedDate": "2026-06-30T23:59:59Z"
+    },
+    {
+      "id": "snap-ng1-q3",
+      "skillId": "sk-30",
+      "skillName": "AngularJS (1.x)",
+      "normalizedName": "AngularJS (1.x)",
+      "category": "Frameworks & Libraries",
+      "timePeriod": "2026-Q3",
+      "mentionCount": 8,
+      "uniqueJobCount": 8,
+      "demandPercentage": 8.8,
+      "industryBreakdown": {
+        "Healthcare": 4,
+        "Financial": 4
+      },
+      "calculatedDate": "2026-09-30T23:59:59Z"
+    },
+    {
+      "id": "snap-ng1-q4",
+      "skillId": "sk-30",
+      "skillName": "AngularJS (1.x)",
+      "normalizedName": "AngularJS (1.x)",
+      "category": "Frameworks & Libraries",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 4,
+      "uniqueJobCount": 4,
+      "demandPercentage": 4.4,
+      "industryBreakdown": {
+        "Healthcare": 2,
+        "Financial": 2
+      },
+      "calculatedDate": "2026-11-20T23:59:59Z"
+    },
+    {
+      "id": "snap-virt-q1",
+      "skillId": "sk-31",
+      "skillName": "On-premise Virtualization",
+      "normalizedName": "On-premise Virtualization",
+      "category": "Cloud Technologies",
+      "timePeriod": "2026-Q1",
+      "mentionCount": 20,
+      "uniqueJobCount": 20,
+      "demandPercentage": 22.2,
+      "industryBreakdown": {
+        "Consulting": 10,
+        "Healthcare": 6,
+        "Financial Services": 4
+      },
+      "calculatedDate": "2026-03-31T23:59:59Z"
+    },
+    {
+      "id": "snap-virt-q2",
+      "skillId": "sk-31",
+      "skillName": "On-premise Virtualization",
+      "normalizedName": "On-premise Virtualization",
+      "category": "Cloud Technologies",
+      "timePeriod": "2026-Q2",
+      "mentionCount": 17,
+      "uniqueJobCount": 17,
+      "demandPercentage": 18.8,
+      "industryBreakdown": {
+        "Consulting": 8,
+        "Healthcare": 5,
+        "Financial Services": 4
+      },
+      "calculatedDate": "2026-06-30T23:59:59Z"
+    },
+    {
+      "id": "snap-virt-q3",
+      "skillId": "sk-31",
+      "skillName": "On-premise Virtualization",
+      "normalizedName": "On-premise Virtualization",
+      "category": "Cloud Technologies",
+      "timePeriod": "2026-Q3",
+      "mentionCount": 14,
+      "uniqueJobCount": 14,
+      "demandPercentage": 15.5,
+      "industryBreakdown": {
+        "Consulting": 7,
+        "Healthcare": 4,
+        "Financial Services": 3
+      },
+      "calculatedDate": "2026-09-30T23:59:59Z"
+    },
+    {
+      "id": "snap-virt-q4",
+      "skillId": "sk-31",
+      "skillName": "On-premise Virtualization",
+      "normalizedName": "On-premise Virtualization",
+      "category": "Cloud Technologies",
+      "timePeriod": "2026-Q4",
+      "mentionCount": 10,
+      "uniqueJobCount": 10,
+      "demandPercentage": 11.1,
+      "industryBreakdown": {
+        "Consulting": 5,
+        "Healthcare": 3,
+        "Financial Services": 2
+      },
+      "calculatedDate": "2026-11-20T23:59:59Z"
+    }
+  ],
+  "aiInsights": [
+    {
+      "id": "insight-1",
+      "insightType": "emerging",
+      "title": "Surge in Generative AI and RAG Architecture Requirements",
+      "description": "Demand for Generative AI and Retrieval-Augmented Generation (RAG) frameworks has escalated by +165% across 2026, transitioning from pure research laboratories into production web services across Financial Services and E-commerce.",
+      "supportingStatistics": [
+        {
+          "label": "Demand Surge",
+          "value": "+165% YoY"
+        },
+        {
+          "label": "Current Job Penetration",
+          "value": "68.8%"
+        },
+        {
+          "label": "Top Adopting Sector",
+          "value": "Technology & FinTech"
+        }
+      ],
+      "actionableRecommendations": [
+        "Incorporate hands-on vector database and LLM orchestration benchmarks into engineering interviews.",
+        "Train mid-level backend engineers in LangChain, LlamaIndex, and latency-optimized inference architectures."
+      ],
+      "skillsInvolved": [
+        "Generative AI",
+        "RAG Systems",
+        "Python",
+        "PyTorch"
+      ],
+      "generatedDate": "2026-11-21T09:00:00Z",
+      "isAiGenerated": true
+    },
+    {
+      "id": "insight-2",
+      "insightType": "declining",
+      "title": "Phasing Out of Legacy Monolithic Web Frameworks",
+      "description": "Job postings requiring AngularJS (1.x) and unmodernized Legacy PHP have dropped precipitously (-62% and -48% respectively). Organizations are actively allocating budget to cloud-native full-stack rewrites utilizing Next.js and Go.",
+      "supportingStatistics": [
+        {
+          "label": "AngularJS Decline",
+          "value": "-62.0%"
+        },
+        {
+          "label": "Legacy PHP Decline",
+          "value": "-48.0%"
+        },
+        {
+          "label": "Replacement Framework",
+          "value": "Next.js & React (+22%)"
+        }
+      ],
+      "actionableRecommendations": [
+        "De-emphasize legacy framework screening in recruitment filters to widen the candidate pool.",
+        "Establish internal migration sprints paired with React/TypeScript training."
+      ],
+      "skillsInvolved": [
+        "AngularJS (1.x)",
+        "Legacy PHP",
+        "Next.js",
+        "React"
+      ],
+      "generatedDate": "2026-11-21T09:00:00Z",
+      "isAiGenerated": true
+    },
+    {
+      "id": "insight-3",
+      "insightType": "industry_shift",
+      "title": "Healthcare & FinTech Acceleration into Cloud-Native Microservices",
+      "description": "Highly regulated industries (Healthcare and Financial Services) previously anchored to on-premise infrastructure are aggressively adopting Kubernetes, Docker, and AWS, subject to strict HIPAA and PCI-DSS compliance controls.",
+      "supportingStatistics": [
+        {
+          "label": "Healthcare K8s Adoption",
+          "value": "+42% growth"
+        },
+        {
+          "label": "Cloud Migration Pct",
+          "value": "70% of new roles"
+        }
+      ],
+      "actionableRecommendations": [
+        "Prioritize hiring DevSecOps engineers who possess verified compliance certifications alongside Kubernetes expertise.",
+        "Upskill existing infrastructure teams from VM management to container orchestration."
+      ],
+      "skillsInvolved": [
+        "Kubernetes",
+        "Docker",
+        "AWS",
+        "HIPAA Compliance"
+      ],
+      "generatedDate": "2026-11-21T09:00:00Z",
+      "isAiGenerated": true
+    },
+    {
+      "id": "insight-4",
+      "insightType": "recruitment",
+      "title": "High Scarcity: Full-Stack Engineers with Distributed Systems Mastery",
+      "description": "Recruitment cycles for candidates possessing both TypeScript/Next.js frontend expertise and high-scale PostgreSQL/Kubernetes distributed systems knowledge take 35% longer to close than standard frontend roles.",
+      "supportingStatistics": [
+        {
+          "label": "Time-to-Hire Increase",
+          "value": "+35%"
+        },
+        {
+          "label": "Salary Premium Index",
+          "value": "1.28x"
+        }
+      ],
+      "actionableRecommendations": [
+        "Consider splitting unicorn role descriptions into focused specialists or offer tailored remote compensation incentives.",
+        "Streamline technical assessment stages to prevent top-tier candidate drop-off."
+      ],
+      "skillsInvolved": [
+        "TypeScript",
+        "Next.js",
+        "PostgreSQL",
+        "System Design"
+      ],
+      "generatedDate": "2026-11-21T09:00:00Z",
+      "isAiGenerated": true
+    },
+    {
+      "id": "insight-5",
+      "insightType": "upskilling",
+      "title": "Upskilling Pathway: Transitioning Software Engineers into AI Product Engineers",
+      "description": "Rather than competing exclusively in an overheated market for specialized AI PhDs, organizations successfully training existing Python and TypeScript developers in evaluation metrics and prompt engineering are achieving 2x faster project turnaround.",
+      "supportingStatistics": [
+        {
+          "label": "Cost Savings vs External Hiring",
+          "value": "45%"
+        },
+        {
+          "label": "Internal Mobility Retention",
+          "value": "+88%"
+        }
+      ],
+      "actionableRecommendations": [
+        "Provide 4-week internal bootcamps focusing on model fine-tuning and retrieval optimization.",
+        "Pair senior software engineers with AI researchers on production deployment pipelines."
+      ],
+      "skillsInvolved": [
+        "Python",
+        "FastAPI",
+        "Generative AI",
+        "Problem Solving"
+      ],
+      "generatedDate": "2026-11-21T09:00:00Z",
+      "isAiGenerated": true
+    },
+    {
+      "id": "insight-6",
+      "insightType": "skill_combinations",
+      "title": "Co-occurrence Pattern: Python + PyTorch + Kubernetes + Cloud",
+      "description": "Over 82% of machine learning job listings now mandate simultaneous competence in both model modeling (PyTorch) and production container orchestration (Kubernetes, Docker, Cloud). The boundary between data science and DevOps has permanently blurred.",
+      "supportingStatistics": [
+        {
+          "label": "Co-occurrence Rate",
+          "value": "82.4%"
+        },
+        {
+          "label": "Primary Job Cluster",
+          "value": "MLOps & AI Platform"
+        }
+      ],
+      "actionableRecommendations": [
+        "Design interview rubrics that test deployment and monitoring of models, not just Jupyter notebook prototyping.",
+        "Build cross-disciplinary teams where ML practitioners participate directly in on-call rotation."
+      ],
+      "skillsInvolved": [
+        "Python",
+        "PyTorch",
+        "Kubernetes",
+        "Docker",
+        "AWS"
+      ],
+      "generatedDate": "2026-11-21T09:00:00Z",
+      "isAiGenerated": true
+    }
+  ]
+}
