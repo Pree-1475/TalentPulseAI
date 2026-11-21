@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
@@ -13,17 +13,23 @@ import {
   Settings,
   ChevronLeft,
   ChevronRight,
-  ShieldCheck,
+  X,
   Activity,
-  Layers,
 } from 'lucide-react';
 
 interface SidebarProps {
   collapsed: boolean;
   setCollapsed: (val: boolean | ((prev: boolean) => boolean)) => void;
+  mobileOpen: boolean;
+  setMobileOpen: (open: boolean) => void;
 }
 
-export function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
+export function Sidebar({
+  collapsed,
+  setCollapsed,
+  mobileOpen,
+  setMobileOpen,
+}: SidebarProps) {
   const pathname = usePathname();
 
   const navItems = [
@@ -61,7 +67,7 @@ export function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
       label: 'Reports & Export',
       href: '/reports',
       icon: FileText,
-      badge: 'PDF/CSV',
+      badge: 'CSV/PDF',
     },
     {
       label: 'Settings & Status',
@@ -71,46 +77,52 @@ export function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
     },
   ];
 
-  return (
-    <aside
-      className={`fixed top-0 left-0 bottom-0 z-30 flex flex-col bg-white border-r border-slate-200 transition-all duration-300 ${
-        collapsed ? 'w-20' : 'w-64'
-      }`}
-    >
-      {/* Brand Logo & Name */}
-      <div className="h-16 flex items-center justify-between px-4 border-b border-slate-200">
-        <Link href="/" className="flex items-center gap-3 overflow-hidden">
-          <div className="w-9 h-9 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold flex-shrink-0 shadow-sm">
-            <Activity className="w-5 h-5" />
+  const sidebarContent = (
+    <div className="flex flex-col h-full bg-white border-r border-slate-200">
+      {/* Brand Header */}
+      <div className="h-14 flex items-center justify-between px-4 border-b border-slate-200 flex-shrink-0">
+        <Link
+          href="/"
+          onClick={() => setMobileOpen(false)}
+          className="flex items-center gap-2.5 overflow-hidden group"
+        >
+          <div className="w-7 h-7 rounded-md bg-blue-600 text-white flex items-center justify-center font-semibold text-xs flex-shrink-0 shadow-2xs">
+            <Activity className="w-4 h-4" />
           </div>
-          {!collapsed && (
-            <div className="flex flex-col">
-              <span className="font-semibold text-slate-900 text-base leading-tight tracking-tight">
-                TalentPulse<span className="text-indigo-600">AI</span>
+          {(!collapsed || mobileOpen) && (
+            <div className="flex flex-col truncate">
+              <span className="font-semibold text-slate-900 text-sm leading-tight tracking-tight">
+                TalentPulse <span className="text-blue-600">AI</span>
               </span>
-              <span className="text-[11px] text-slate-500 font-medium">Skill Demand Monitor</span>
+              <span className="text-[10px] text-slate-400 font-medium tracking-tight">
+                Skill Demand Monitor
+              </span>
             </div>
           )}
         </Link>
+
+        {/* Desktop Collapse Toggle */}
         <button
           onClick={() => setCollapsed((prev) => !prev)}
-          className="p-1.5 rounded-md hover:bg-slate-100 text-slate-400 hover:text-slate-600 transition-colors"
+          className="hidden lg:flex p-1 rounded hover:bg-slate-100 text-slate-400 hover:text-slate-600 transition-colors"
           title={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+          aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
         >
           {collapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
         </button>
+
+        {/* Mobile Close Button */}
+        <button
+          onClick={() => setMobileOpen(false)}
+          className="lg:hidden p-1 rounded hover:bg-slate-100 text-slate-400 hover:text-slate-700"
+          aria-label="Close navigation"
+        >
+          <X className="w-5 h-5" />
+        </button>
       </div>
 
-      {/* Navigation links */}
-      <nav className="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
-        <div className="px-3 pb-2">
-          {!collapsed && (
-            <span className="text-[11px] uppercase tracking-wider font-semibold text-slate-400">
-              Platform Modules
-            </span>
-          )}
-        </div>
-
+      {/* Navigation Links */}
+      <nav className="flex-1 px-2.5 py-3 space-y-0.5 overflow-y-auto" aria-label="Main Navigation">
         {navItems.map((item) => {
           const isActive = pathname === item.href;
           const Icon = item.icon;
@@ -119,28 +131,29 @@ export function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
             <Link
               key={item.href}
               href={item.href}
-              className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors group relative ${
+              onClick={() => setMobileOpen(false)}
+              className={`flex items-center gap-2.5 px-2.5 py-2 rounded-md text-xs font-medium transition-colors relative group ${
                 isActive
-                  ? 'bg-indigo-50 text-indigo-700'
+                  ? 'bg-slate-100/80 text-slate-900 font-semibold'
                   : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
               }`}
-              title={collapsed ? item.label : undefined}
+              title={collapsed && !mobileOpen ? item.label : undefined}
             >
               <Icon
-                className={`w-5 h-5 flex-shrink-0 ${
-                  isActive ? 'text-indigo-600' : 'text-slate-400 group-hover:text-slate-600'
+                className={`w-4 h-4 flex-shrink-0 ${
+                  isActive ? 'text-blue-600' : 'text-slate-400 group-hover:text-slate-600'
                 }`}
               />
 
-              {!collapsed && (
+              {(!collapsed || mobileOpen) && (
                 <div className="flex-1 flex items-center justify-between truncate">
                   <span className="truncate">{item.label}</span>
                   {item.badge && (
                     <span
-                      className={`text-[10px] px-1.5 py-0.5 rounded font-semibold ${
+                      className={`text-[9px] px-1.5 py-0.2 rounded font-semibold tracking-tight ${
                         isActive
-                          ? 'bg-indigo-100 text-indigo-700'
-                          : 'bg-slate-100 text-slate-500 group-hover:bg-slate-200'
+                          ? 'bg-slate-200/80 text-slate-700'
+                          : 'text-slate-400'
                       }`}
                     >
                       {item.badge}
@@ -149,33 +162,64 @@ export function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
                 </div>
               )}
 
-              {/* Active Indicator Bar */}
+              {/* Active thin indicator */}
               {isActive && (
-                <div className="absolute left-0 top-1.5 bottom-1.5 w-1 bg-indigo-600 rounded-r" />
+                <div className="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-blue-600 rounded-r" />
               )}
             </Link>
           );
         })}
       </nav>
 
-      {/* Footer Info / Data Sync */}
-      <div className="p-3 border-t border-slate-200">
-        {!collapsed ? (
-          <div className="p-3 bg-slate-50 rounded-lg border border-slate-200/80">
-            <div className="flex items-center gap-2 mb-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-xs font-semibold text-slate-800">Intelligence Engine</span>
+      {/* Footer System Status */}
+      <div className="p-3 border-t border-slate-200 flex-shrink-0 bg-slate-50/50">
+        {(!collapsed || mobileOpen) ? (
+          <div className="flex items-center justify-between text-[11px]">
+            <div className="flex items-center gap-1.5 text-slate-600">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="font-medium text-slate-700">Analytics Engine</span>
             </div>
-            <p className="text-[11px] text-slate-500 leading-relaxed">
-              Monitoring verified technical and professional competencies across Q1–Q4 2026.
-            </p>
+            <span className="text-[10px] text-slate-400 font-mono">Q1-Q4 '26</span>
           </div>
         ) : (
-          <div className="flex justify-center py-2" title="Engine Active">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+          <div className="flex justify-center" title="Analytics Engine Active">
+            <span className="w-2 h-2 rounded-full bg-emerald-500" />
           </div>
         )}
       </div>
-    </aside>
+    </div>
+  );
+
+  return (
+    <>
+      {/* Desktop Persistent Sidebar */}
+      <aside
+        className={`hidden lg:block fixed top-0 left-0 bottom-0 z-30 transition-all duration-200 ease-out ${
+          collapsed ? 'w-[68px]' : 'w-[232px]'
+        }`}
+      >
+        {sidebarContent}
+      </aside>
+
+      {/* Mobile Drawer Overlay */}
+      {mobileOpen && (
+        <div
+          onClick={() => setMobileOpen(false)}
+          className="lg:hidden fixed inset-0 z-40 bg-slate-900/30 backdrop-blur-2xs transition-opacity"
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Mobile Drawer */}
+      <aside
+        className={`lg:hidden fixed top-0 left-0 bottom-0 z-50 w-64 bg-white shadow-xl transform transition-transform duration-200 ease-out ${
+          mobileOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+        aria-modal="true"
+        role="dialog"
+      >
+        {sidebarContent}
+      </aside>
+    </>
   );
 }

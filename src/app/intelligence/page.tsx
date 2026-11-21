@@ -5,19 +5,12 @@ import {
   TrendingUp,
   TrendingDown,
   Minus,
-  Sparkles,
-  Info,
-  ArrowUpDown,
-  Filter,
   Search,
-  ExternalLink,
-  Building2,
-  Calendar,
-  Layers,
+  ArrowUpDown,
   ChevronRight,
   HelpCircle,
 } from 'lucide-react';
-import { SkillDemandAnalysis, DemandClassification } from '@/types';
+import { SkillDemandAnalysis } from '@/types';
 import { SkillDetailModal } from '@/components/SkillDetailModal';
 
 export default function IntelligencePage() {
@@ -77,146 +70,102 @@ export default function IntelligencePage() {
   return (
     <div className="space-y-6">
       {/* Title */}
-      <div>
+      <div className="pb-4 border-b border-slate-200">
         <h1 className="text-2xl font-bold tracking-tight text-slate-900">
           Skill Demand Intelligence &amp; Velocity
         </h1>
-        <p className="text-xs text-slate-500 mt-1">
-          Algorithmic classification of technical and professional skill trajectories derived from chronological observation snapshots.
+        <p className="text-xs text-slate-500 mt-1 max-w-3xl">
+          Deterministic statistical momentum calculation derived from comparative quarterly snapshots. Classifications are rule-based and derived from verified posting observations.
         </p>
       </div>
 
       {/* Transparent Statistical Methodology Box */}
-      <div className="p-4 bg-slate-900 text-slate-100 rounded-xl shadow-sm border border-slate-800">
-        <div className="flex items-center gap-2 mb-2">
-          <HelpCircle className="w-4 h-4 text-indigo-400" />
-          <h2 className="text-xs font-semibold uppercase tracking-wider text-indigo-300">
-            Transparent Classification Methodology &amp; Mathematical Formulation
-          </h2>
+      <div className="p-4 bg-slate-900 text-slate-100 rounded-lg text-xs space-y-2">
+        <div className="flex items-center gap-2">
+          <HelpCircle className="w-3.5 h-3.5 text-blue-400" />
+          <span className="font-semibold uppercase tracking-wider text-[11px] text-blue-300">
+            Mathematical Formulation &amp; Classification Boundaries
+          </span>
         </div>
-        <p className="text-xs text-slate-300 leading-relaxed">
-          Classifications are strictly deterministic and never hallucinated by generative models.
-          For periods \(T_1\) and \(T_2\), relative demand change is formulated as:
-          <span className="font-mono text-indigo-300 ml-1">
+        <p className="text-slate-300 leading-relaxed text-[11px]">
+          Relative velocity is computed as:
+          <span className="font-mono text-blue-300 ml-1">
             &Delta;% = ((DemandPct&#8322; - DemandPct&#8321;) / DemandPct&#8321;) &times; 100
-          </span>.
+          </span>
+          . The LLM provides contextual interpretation based strictly on these empirical metrics.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-3 pt-3 border-t border-slate-800 text-xs">
-          <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
-            <span><strong>Rising:</strong> &ge; +12.0% relative surge</span>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-2 border-t border-slate-800 text-[11px]">
+          <div className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-emerald-400" />
+            <span><strong>Rising:</strong> &ge; +12.0% relative growth</span>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-blue-400" />
+          <div className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-slate-400" />
             <span><strong>Stable:</strong> Between -10.0% and +12.0%</span>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-rose-400" />
+          <div className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-rose-400" />
             <span><strong>Declining:</strong> &le; -10.0% relative drop</span>
           </div>
         </div>
       </div>
 
-      {/* Segment Selector & Metrics Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
-        <button
-          onClick={() => setFilterClass('All')}
-          className={`p-4 rounded-xl border text-left transition-all ${
-            filterClass === 'All'
-              ? 'bg-white border-indigo-600 shadow-sm ring-1 ring-indigo-600'
-              : 'bg-white border-slate-200 hover:border-slate-300'
-          }`}
-        >
-          <span className="text-xs text-slate-500 font-semibold uppercase tracking-wider">
-            All Monitored
-          </span>
-          <div className="text-2xl font-bold text-slate-900 mt-1">{analyses.length}</div>
-          <span className="text-[11px] text-slate-400">Total skills indexed</span>
-        </button>
-
-        <button
-          onClick={() => setFilterClass('Rising')}
-          className={`p-4 rounded-xl border text-left transition-all ${
-            filterClass === 'Rising'
-              ? 'bg-white border-emerald-600 shadow-sm ring-1 ring-emerald-600'
-              : 'bg-white border-slate-200 hover:border-emerald-200'
-          }`}
-        >
-          <div className="flex items-center justify-between">
-            <span className="text-xs text-emerald-700 font-semibold uppercase tracking-wider">
-              Rising Skills
+      {/* Open Segmented Filter Tabs */}
+      <div className="flex items-center gap-6 border-b border-slate-200 text-xs">
+        {[
+          { id: 'All', label: 'All Monitored Skills', count: analyses.length },
+          { id: 'Rising', label: 'Rising Skills', count: risingCount, color: 'text-emerald-700' },
+          { id: 'Stable', label: 'Stable Skills', count: stableCount, color: 'text-slate-600' },
+          { id: 'Declining', label: 'Declining Skills', count: decliningCount, color: 'text-rose-700' },
+        ].map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setFilterClass(tab.id)}
+            className={`pb-3 font-medium transition-colors relative flex items-center gap-1.5 ${
+              filterClass === tab.id
+                ? 'text-slate-900 font-semibold'
+                : 'text-slate-500 hover:text-slate-800'
+            }`}
+          >
+            <span>{tab.label}</span>
+            <span className={`text-[11px] tabular-nums font-mono ${tab.color || 'text-slate-400'}`}>
+              ({tab.count})
             </span>
-            <TrendingUp className="w-4 h-4 text-emerald-600" />
-          </div>
-          <div className="text-2xl font-bold text-emerald-700 mt-1">{risingCount}</div>
-          <span className="text-[11px] text-emerald-600">Surging demand</span>
-        </button>
-
-        <button
-          onClick={() => setFilterClass('Stable')}
-          className={`p-4 rounded-xl border text-left transition-all ${
-            filterClass === 'Stable'
-              ? 'bg-white border-blue-600 shadow-sm ring-1 ring-blue-600'
-              : 'bg-white border-slate-200 hover:border-blue-200'
-          }`}
-        >
-          <div className="flex items-center justify-between">
-            <span className="text-xs text-blue-700 font-semibold uppercase tracking-wider">
-              Stable Skills
-            </span>
-            <Minus className="w-4 h-4 text-blue-600" />
-          </div>
-          <div className="text-2xl font-bold text-blue-700 mt-1">{stableCount}</div>
-          <span className="text-[11px] text-blue-600">Core market baselines</span>
-        </button>
-
-        <button
-          onClick={() => setFilterClass('Declining')}
-          className={`p-4 rounded-xl border text-left transition-all ${
-            filterClass === 'Declining'
-              ? 'bg-white border-rose-600 shadow-sm ring-1 ring-rose-600'
-              : 'bg-white border-slate-200 hover:border-rose-200'
-          }`}
-        >
-          <div className="flex items-center justify-between">
-            <span className="text-xs text-rose-700 font-semibold uppercase tracking-wider">
-              Declining Skills
-            </span>
-            <TrendingDown className="w-4 h-4 text-rose-600" />
-          </div>
-          <div className="text-2xl font-bold text-rose-700 mt-1">{decliningCount}</div>
-          <span className="text-[11px] text-rose-600">Sunsetting frameworks</span>
-        </button>
+            {filterClass === tab.id && (
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 rounded-full" />
+            )}
+          </button>
+        ))}
       </div>
 
-      {/* Filter and Sorting Toolbar */}
-      <div className="bg-white p-4 border border-slate-200/80 rounded-xl shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3">
+      {/* Search and Sort Controls */}
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
         <div className="relative w-full sm:w-80">
-          <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+          <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Filter by skill, category, or industry..."
-            className="w-full pl-9 pr-4 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg text-slate-800 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+            className="w-full pl-8 pr-3 py-1.5 bg-slate-50/70 hover:bg-slate-50 border border-slate-200 rounded-md text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
           />
         </div>
 
         <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
-          <span className="text-xs text-slate-500 font-medium">Sort By:</span>
+          <span className="text-slate-400">Sort by:</span>
           <select
             value={sortField}
             onChange={(e) => setSortField(e.target.value as any)}
-            className="text-xs bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-slate-700 focus:outline-none"
+            className="bg-white border border-slate-200 rounded-md px-2.5 py-1 text-slate-700 focus:outline-none focus:border-blue-500"
           >
-            <option value="change">Demand Change (&Delta;%)</option>
-            <option value="demand">Current Demand (% of roles)</option>
+            <option value="change">Period Change (&Delta;%)</option>
+            <option value="demand">Current Demand (% Roles)</option>
             <option value="mentions">Total Mentions</option>
           </select>
 
           <button
             onClick={() => setSortOrder((prev) => (prev === 'desc' ? 'asc' : 'desc'))}
-            className="p-1.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-600 hover:text-slate-900"
+            className="p-1 border border-slate-200 rounded-md text-slate-500 hover:text-slate-800 hover:bg-slate-50"
             title={`Sort ${sortOrder === 'desc' ? 'Ascending' : 'Descending'}`}
           >
             <ArrowUpDown className="w-3.5 h-3.5" />
@@ -225,26 +174,26 @@ export default function IntelligencePage() {
       </div>
 
       {/* Main Intelligence Table */}
-      <div className="bg-white border border-slate-200/80 rounded-xl shadow-sm overflow-hidden">
+      <div className="border border-slate-200 rounded-md overflow-hidden bg-white">
         {loading ? (
-          <div className="p-8 text-center text-xs text-slate-500">Calculating analytics...</div>
+          <div className="p-8 text-center text-xs text-slate-500">Calculating intelligence metrics...</div>
         ) : filteredAnalyses.length === 0 ? (
           <div className="p-8 text-center text-xs text-slate-400">
-            No skills matched your search and filter criteria.
+            No skills matched the specified criteria.
           </div>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse text-xs">
               <thead>
-                <tr className="bg-slate-50/70 border-b border-slate-200 text-slate-500 font-semibold uppercase text-[10px] tracking-wider">
-                  <th className="py-3 px-4">Skill / Competency</th>
-                  <th className="py-3 px-4">Category</th>
-                  <th className="py-3 px-4">Classification</th>
-                  <th className="py-3 px-4">Period &Delta;%</th>
-                  <th className="py-3 px-4">Market Share (% Roles)</th>
-                  <th className="py-3 px-4">Primary Industry</th>
-                  <th className="py-3 px-4">AI Statistical Explanation</th>
-                  <th className="py-3 px-4 text-right">Deep Dive</th>
+                <tr className="bg-slate-50/70 border-b border-slate-200 text-slate-500 font-semibold text-[11px] uppercase tracking-wider">
+                  <th className="py-2.5 px-3.5">Skill / Competency</th>
+                  <th className="py-2.5 px-3.5">Category</th>
+                  <th className="py-2.5 px-3.5">Momentum</th>
+                  <th className="py-2.5 px-3.5">Period &Delta;%</th>
+                  <th className="py-2.5 px-3.5">Market Share (% Roles)</th>
+                  <th className="py-2.5 px-3.5">Primary Sector</th>
+                  <th className="py-2.5 px-3.5">AI Statistical Explanation</th>
+                  <th className="py-2.5 px-3.5 text-right">Details</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
@@ -252,63 +201,60 @@ export default function IntelligencePage() {
                   <tr
                     key={a.skillId}
                     onClick={() => setSelectedSkillId(a.skillId)}
-                    className="hover:bg-slate-50/70 cursor-pointer transition-colors group"
+                    className="hover:bg-slate-50/60 cursor-pointer transition-colors group"
                   >
-                    <td className="py-3.5 px-4 font-semibold text-slate-900 group-hover:text-indigo-600">
+                    <td className="py-3 px-3.5 font-semibold text-slate-900 group-hover:text-blue-600">
                       {a.skillName}
                     </td>
-                    <td className="py-3.5 px-4 text-slate-600">
-                      <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 text-[11px]">
-                        {a.category}
-                      </span>
+                    <td className="py-3 px-3.5 text-slate-600">
+                      {a.category}
                     </td>
-                    <td className="py-3.5 px-4">
+                    <td className="py-3 px-3.5">
                       <span
-                        className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold ${
+                        className={`inline-flex items-center gap-1 font-medium ${
                           a.classification === 'Rising'
-                            ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                            ? 'text-emerald-700 font-semibold'
                             : a.classification === 'Declining'
-                            ? 'bg-rose-50 text-rose-700 border border-rose-200'
-                            : a.classification === 'Stable'
-                            ? 'bg-blue-50 text-blue-700 border border-blue-200'
-                            : 'bg-slate-100 text-slate-500'
+                            ? 'text-rose-700 font-semibold'
+                            : 'text-slate-600'
                         }`}
                       >
-                        {a.classification === 'Rising' && <TrendingUp className="w-3 h-3" />}
-                        {a.classification === 'Declining' && <TrendingDown className="w-3 h-3" />}
-                        {a.classification === 'Stable' && <Minus className="w-3 h-3" />}
-                        {a.classification}
+                        {a.classification === 'Rising' && <TrendingUp className="w-3.5 h-3.5 text-emerald-600" />}
+                        {a.classification === 'Declining' && <TrendingDown className="w-3.5 h-3.5 text-rose-600" />}
+                        {a.classification === 'Stable' && <Minus className="w-3.5 h-3.5 text-slate-400" />}
+                        <span>{a.classification}</span>
                       </span>
                     </td>
-                    <td className="py-3.5 px-4 font-mono font-bold">
+                    <td className="py-3 px-3.5 font-mono font-semibold tabular-nums">
                       <span
                         className={
                           a.pctChange > 0
-                            ? 'text-emerald-600'
+                            ? 'text-emerald-700'
                             : a.pctChange < 0
-                            ? 'text-rose-600'
+                            ? 'text-rose-700'
                             : 'text-slate-600'
                         }
                       >
                         {a.pctChange >= 0 ? `+${a.pctChange.toFixed(1)}%` : `${a.pctChange.toFixed(1)}%`}
                       </span>
                     </td>
-                    <td className="py-3.5 px-4 font-semibold text-slate-800">
+                    <td className="py-3 px-3.5 font-semibold text-slate-800 tabular-nums">
                       {a.currentDemandPct.toFixed(1)}%
                     </td>
-                    <td className="py-3.5 px-4 text-slate-600 text-[11px]">
-                      {a.topIndustries[0]?.industry || 'Technology'}
+                    <td className="py-3 px-3.5 text-slate-600">
+                      {a.topIndustries[0]?.industry || 'Cross-industry'}
                     </td>
-                    <td className="py-3.5 px-4 text-slate-500 text-[11px] max-w-xs truncate">
+                    <td className="py-3 px-3.5 text-slate-500 max-w-xs truncate text-[11px]">
                       {a.aiInsight}
                     </td>
-                    <td className="py-3.5 px-4 text-right">
+                    <td className="py-3 px-3.5 text-right">
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
                           setSelectedSkillId(a.skillId);
                         }}
-                        className="text-indigo-600 hover:text-indigo-800 p-1 rounded hover:bg-indigo-50"
+                        className="text-slate-400 group-hover:text-blue-600 p-1"
+                        aria-label={`View ${a.skillName} details`}
                       >
                         <ChevronRight className="w-4 h-4" />
                       </button>

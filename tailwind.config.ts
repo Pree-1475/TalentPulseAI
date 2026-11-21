@@ -9,19 +9,36 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        brand: {
-          50: "#f0f4ff",
-          100: "#dbe4fe",
-          200: "#bfd0fd",
-          300: "#93b2fb",
-          400: "#608bf6",
-          500: "#3b64ee",
-          600: "#2446e2",
-          700: "#1d34cd",
-          800: "#1d2ca5",
-          900: "#1c2a82",
-          950: "#11184f",
+        accent: {
+          DEFAULT: "#2563eb",
+          hover: "#1d4ed8",
+          subtle: "#eff6ff",
         },
+        surface: {
+          DEFAULT: "#ffffff",
+          subtle: "#f8fafc",
+          hover: "#f1f5f9",
+        },
+        border: {
+          DEFAULT: "#e5e7eb",
+          light: "#f1f5f9",
+          dark: "#d1d5db",
+        },
+        trend: {
+          rising: "#16a34a",
+          declining: "#dc2626",
+          stable: "#64748b",
+        },
+      },
+      fontFamily: {
+        sans: [
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Inter",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif",
+        ],
       },
     },
   },

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Info, Sparkles, AlertCircle, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 interface StatusBannerProps {
   isDemoMode?: boolean;
@@ -10,37 +10,30 @@ interface StatusBannerProps {
 
 export function StatusBanner({ isDemoMode = false }: StatusBannerProps) {
   return (
-    <div className="mb-6 bg-white border border-slate-200 rounded-xl p-4 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-      <div className="flex items-start gap-3">
-        <div className="w-8 h-8 rounded-lg bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 flex-shrink-0 mt-0.5">
-          <Sparkles className="w-4 h-4" />
-        </div>
-        <div>
-          <div className="flex items-center gap-2">
-            <h2 className="text-sm font-semibold text-slate-900">
-              Active Job Market Intelligence
-            </h2>
-            <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">
-              Q1–Q4 2026 Live Tracking
-            </span>
-          </div>
-          <p className="text-xs text-slate-500 mt-0.5">
-            Observing verified career postings across Technology, FinTech, Healthcare, and E-commerce.
-            Calculate rising vs declining skills with transparent statistical models.
-          </p>
-        </div>
+    <div className="mb-6 pb-4 border-b border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+      {/* Context Information */}
+      <div className="flex items-center gap-2.5 text-xs text-slate-600">
+        <span className="w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0" />
+        <span className="font-semibold text-slate-900">Active Job Market Intelligence</span>
+        <span className="text-slate-300">&bull;</span>
+        <span className="text-slate-500 font-mono text-[11px]">Q1–Q4 2026 Live Tracking</span>
+        <span className="hidden md:inline text-slate-300">&bull;</span>
+        <span className="hidden md:inline text-slate-500">
+          Technology &bull; FinTech &bull; Healthcare &bull; E-commerce &bull; Consulting
+        </span>
       </div>
 
-      <div className="flex items-center gap-3 w-full md:w-auto justify-end">
+      {/* Primary & Secondary Actions */}
+      <div className="flex items-center gap-2 self-end sm:self-auto">
         <Link
           href="/sources"
-          className="text-xs font-medium text-slate-700 hover:text-indigo-600 px-3 py-1.5 rounded-lg border border-slate-200 hover:border-indigo-300 transition-colors whitespace-nowrap"
+          className="text-xs font-medium text-slate-700 hover:text-slate-900 px-3 py-1.5 rounded-md hover:bg-slate-100 transition-colors"
         >
           Add Career URL
         </Link>
         <Link
           href="/reports"
-          className="text-xs font-medium text-white bg-indigo-600 hover:bg-indigo-700 px-3 py-1.5 rounded-lg shadow-sm transition-colors flex items-center gap-1.5 whitespace-nowrap"
+          className="text-xs font-medium text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded-md transition-colors flex items-center gap-1 shadow-2xs"
         >
           <span>Export Report</span>
           <ArrowRight className="w-3.5 h-3.5" />

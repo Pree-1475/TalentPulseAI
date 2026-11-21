@@ -2,17 +2,10 @@
 
 import React, { useEffect, useState } from 'react';
 import {
-  FileText,
   Download,
   Printer,
-  TrendingUp,
-  TrendingDown,
-  Building2,
-  Calendar,
-  Layers,
-  Sparkles,
-  CheckCircle2,
   Table,
+  CheckCircle2,
 } from 'lucide-react';
 import { DashboardMetrics, SkillDemandAnalysis, AiInsight } from '@/types';
 
@@ -48,7 +41,7 @@ export default function ReportsPage() {
   if (loading) {
     return (
       <div className="p-12 text-center text-xs text-slate-400">
-        Compiling Executive Workforce Report...
+        Compiling executive workforce report...
       </div>
     );
   }
@@ -60,12 +53,12 @@ export default function ReportsPage() {
   return (
     <div className="space-y-6">
       {/* Action Header (Hidden in Print) */}
-      <div className="no-print flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="no-print flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
         <div>
           <h1 className="text-2xl font-bold tracking-tight text-slate-900">
             Workforce Intelligence &amp; Skill Demand Reports
           </h1>
-          <p className="text-xs text-slate-500 mt-1">
+          <p className="text-xs text-slate-500 mt-1 max-w-2xl">
             Generate formal executive briefings, download raw CSV datasets, or print/export official PDF reports.
           </p>
         </div>
@@ -73,121 +66,125 @@ export default function ReportsPage() {
         <div className="flex items-center gap-2">
           <button
             onClick={() => handleExportCsv('skills')}
-            className="flex items-center gap-1.5 px-3 py-2 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 rounded-lg text-xs font-semibold shadow-sm transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 rounded-md text-xs font-semibold shadow-2xs transition-colors"
           >
-            <Download className="w-4 h-4 text-slate-500" />
+            <Download className="w-3.5 h-3.5 text-slate-500" />
             <span>Export Skills CSV</span>
           </button>
           <button
             onClick={() => handleExportCsv('jobs')}
-            className="flex items-center gap-1.5 px-3 py-2 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 rounded-lg text-xs font-semibold shadow-sm transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 rounded-md text-xs font-semibold shadow-2xs transition-colors"
           >
-            <Table className="w-4 h-4 text-slate-500" />
+            <Table className="w-3.5 h-3.5 text-slate-500" />
             <span>Export Jobs CSV</span>
           </button>
           <button
             onClick={handlePrint}
-            className="flex items-center gap-1.5 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-semibold shadow-sm transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-xs font-semibold shadow-2xs transition-colors"
           >
-            <Printer className="w-4 h-4" />
-            <span>Print / Save PDF Report</span>
+            <Printer className="w-3.5 h-3.5" />
+            <span>Print / PDF</span>
           </button>
         </div>
       </div>
 
-      {/* Printable Report Document Card */}
-      <div className="bg-white border border-slate-200 rounded-2xl shadow-md p-8 max-w-5xl mx-auto space-y-8">
-        {/* Report Document Header */}
-        <div className="border-b border-slate-200 pb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      {/* Printable Report Document Container */}
+      <div className="border border-slate-200 rounded-lg p-8 max-w-5xl mx-auto space-y-8 bg-white">
+        {/* Document Header */}
+        <div className="border-b border-slate-200 pb-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-xs font-bold text-indigo-600 uppercase tracking-wider">
-                TalentPulse AI &bull; Executive Market Briefing
-              </span>
-            </div>
-            <h2 className="text-2xl font-bold text-slate-900">
+            <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest block mb-1">
+              TalentPulse AI &bull; Executive Market Briefing
+            </span>
+            <h2 className="text-xl font-bold text-slate-900">
               Job Market Skill Demand &amp; Workforce Planning Report
             </h2>
-            <div className="flex items-center gap-4 text-xs text-slate-500 mt-1">
+            <div className="flex items-center gap-3 text-xs text-slate-500 mt-1">
               <span>Coverage: Q1 2026 &ndash; Q4 2026</span>
               <span>&bull;</span>
               <span>Generated: {new Date().toLocaleDateString()}</span>
               <span>&bull;</span>
-              <span>Classification Standard: Relative Velocity Delta (&Delta;%)</span>
+              <span>Standard: Deterministic Relative Velocity Delta (&Delta;%)</span>
             </div>
           </div>
-          <div className="text-right">
-            <div className="text-xs font-semibold text-slate-900">Talent Acquisition &amp; Strategy</div>
-            <div className="text-[11px] text-slate-400">Enterprise Edition</div>
+          <div className="text-right text-xs">
+            <div className="font-semibold text-slate-900">Talent Acquisition &amp; Strategy</div>
+            <div className="text-slate-400">Enterprise Edition</div>
           </div>
         </div>
 
-        {/* Executive Summary Metrics */}
-        <div>
-          <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">
+        {/* Section 1: Executive Summary */}
+        <div className="space-y-3">
+          <h3 className="text-xs font-bold uppercase tracking-wider text-slate-900">
             1. High-Level Market Summary
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-              <span className="text-[11px] text-slate-500">Postings Analyzed</span>
-              <div className="text-2xl font-bold text-slate-900 mt-0.5">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-3 border-y border-slate-200 text-xs">
+            <div>
+              <span className="text-slate-400 block text-[11px]">Postings Analyzed</span>
+              <span className="text-2xl font-bold text-slate-900 tabular-nums">
                 {metrics?.totalJobsAnalyzed || 0}
-              </div>
+              </span>
             </div>
-            <div className="p-4 bg-emerald-50/50 rounded-xl border border-emerald-100">
-              <span className="text-[11px] text-emerald-700 font-semibold">Rising Competencies</span>
-              <div className="text-2xl font-bold text-emerald-700 mt-0.5">{rising.length}</div>
+            <div>
+              <span className="text-emerald-700 font-medium block text-[11px]">Rising Competencies</span>
+              <span className="text-2xl font-bold text-emerald-700 tabular-nums">
+                {rising.length}
+              </span>
             </div>
-            <div className="p-4 bg-blue-50/50 rounded-xl border border-blue-100">
-              <span className="text-[11px] text-blue-700 font-semibold">Stable Competencies</span>
-              <div className="text-2xl font-bold text-blue-700 mt-0.5">{stable.length}</div>
+            <div>
+              <span className="text-slate-600 font-medium block text-[11px]">Stable Competencies</span>
+              <span className="text-2xl font-bold text-slate-800 tabular-nums">
+                {stable.length}
+              </span>
             </div>
-            <div className="p-4 bg-rose-50/50 rounded-xl border border-rose-100">
-              <span className="text-[11px] text-rose-700 font-semibold">Declining Competencies</span>
-              <div className="text-2xl font-bold text-rose-700 mt-0.5">{declining.length}</div>
+            <div>
+              <span className="text-rose-700 font-medium block text-[11px]">Declining Competencies</span>
+              <span className="text-2xl font-bold text-rose-700 tabular-nums">
+                {declining.length}
+              </span>
             </div>
           </div>
         </div>
 
         {/* Section 2: Top Demanded Skills Table */}
-        <div>
-          <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">
-            2. Top 10 Most Demanded Skills Across All Monitored Openings
+        <div className="space-y-3">
+          <h3 className="text-xs font-bold uppercase tracking-wider text-slate-900">
+            2. Top Demanded Skills Across Monitored Openings
           </h3>
-          <div className="border border-slate-200 rounded-xl overflow-hidden">
+          <div className="border border-slate-200 rounded-md overflow-hidden">
             <table className="w-full text-left text-xs">
-              <thead className="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold text-[10px] uppercase">
+              <thead className="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold text-[10px] uppercase tracking-wider">
                 <tr>
                   <th className="py-2.5 px-3">Skill</th>
                   <th className="py-2.5 px-3">Category</th>
                   <th className="py-2.5 px-3">Momentum</th>
-                  <th className="py-2.5 px-3">Demand %</th>
+                  <th className="py-2.5 px-3">Market Share (%)</th>
                   <th className="py-2.5 px-3">Period &Delta;%</th>
                   <th className="py-2.5 px-3">Primary Sector</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
                 {analyses.slice(0, 8).map((sk, idx) => (
-                  <tr key={idx} className="hover:bg-slate-50/50">
+                  <tr key={idx}>
                     <td className="py-2.5 px-3 font-semibold text-slate-900">{sk.skillName}</td>
                     <td className="py-2.5 px-3 text-slate-600">{sk.category}</td>
-                    <td className="py-2.5 px-3">
+                    <td className="py-2.5 px-3 font-medium">
                       <span
-                        className={`px-2 py-0.5 rounded text-[10px] font-semibold ${
+                        className={
                           sk.classification === 'Rising'
-                            ? 'bg-emerald-50 text-emerald-700'
+                            ? 'text-emerald-700'
                             : sk.classification === 'Declining'
-                            ? 'bg-rose-50 text-rose-700'
-                            : 'bg-blue-50 text-blue-700'
-                        }`}
+                            ? 'text-rose-700'
+                            : 'text-slate-600'
+                        }
                       >
                         {sk.classification}
                       </span>
                     </td>
-                    <td className="py-2.5 px-3 font-semibold text-slate-800">
+                    <td className="py-2.5 px-3 font-semibold text-slate-800 tabular-nums">
                       {sk.currentDemandPct.toFixed(1)}%
                     </td>
-                    <td className="py-2.5 px-3 font-mono">
+                    <td className="py-2.5 px-3 font-mono tabular-nums">
                       {sk.pctChange >= 0 ? `+${sk.pctChange.toFixed(1)}%` : `${sk.pctChange.toFixed(1)}%`}
                     </td>
                     <td className="py-2.5 px-3 text-slate-600">
@@ -201,63 +198,61 @@ export default function ReportsPage() {
         </div>
 
         {/* Section 3: Rising vs Declining Breakout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-            <div className="flex items-center gap-2 mb-2 text-emerald-700 font-bold text-xs uppercase">
-              <TrendingUp className="w-4 h-4" />
-              <span>Surging Demand Leaders (&ge; +12% growth)</span>
-            </div>
-            <div className="space-y-2 mt-3">
-              {rising.slice(0, 4).map((r, i) => (
-                <div key={i} className="p-2.5 bg-white rounded-lg border border-slate-200 text-xs">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+          <div className="space-y-3">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-emerald-800">
+              Surging Demand Leaders (&ge; +12% growth)
+            </h4>
+            <div className="space-y-2 text-xs">
+              {rising.slice(0, 3).map((r, i) => (
+                <div key={i} className="p-3 border border-slate-200 rounded-md space-y-1">
                   <div className="flex justify-between font-semibold">
                     <span className="text-slate-900">{r.skillName}</span>
-                    <span className="text-emerald-600">+{r.pctChange.toFixed(1)}%</span>
+                    <span className="text-emerald-700 font-mono tabular-nums">+{r.pctChange.toFixed(1)}%</span>
                   </div>
-                  <p className="text-[11px] text-slate-500 mt-1 line-clamp-2">{r.aiInsight}</p>
+                  <p className="text-[11px] text-slate-500 leading-relaxed">{r.aiInsight}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-            <div className="flex items-center gap-2 mb-2 text-rose-700 font-bold text-xs uppercase">
-              <TrendingDown className="w-4 h-4" />
-              <span>Contracting Paradigms (&le; -10% decline)</span>
-            </div>
-            <div className="space-y-2 mt-3">
-              {declining.slice(0, 4).map((d, i) => (
-                <div key={i} className="p-2.5 bg-white rounded-lg border border-slate-200 text-xs">
+          <div className="space-y-3">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-rose-800">
+              Contracting Competencies (&le; -10% decline)
+            </h4>
+            <div className="space-y-2 text-xs">
+              {declining.slice(0, 3).map((d, i) => (
+                <div key={i} className="p-3 border border-slate-200 rounded-md space-y-1">
                   <div className="flex justify-between font-semibold">
                     <span className="text-slate-900">{d.skillName}</span>
-                    <span className="text-rose-600">{d.pctChange.toFixed(1)}%</span>
+                    <span className="text-rose-700 font-mono tabular-nums">{d.pctChange.toFixed(1)}%</span>
                   </div>
-                  <p className="text-[11px] text-slate-500 mt-1 line-clamp-2">{d.aiInsight}</p>
+                  <p className="text-[11px] text-slate-500 leading-relaxed">{d.aiInsight}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Section 4: Strategic AI HR Recommendations */}
-        <div className="space-y-3 pt-4 border-t border-slate-200">
-          <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500">
-            3. Strategic AI Workforce Recommendations
+        {/* Section 4: Strategic Recommendations */}
+        <div className="space-y-3 pt-4 border-t border-slate-200 text-xs">
+          <h3 className="text-xs font-bold uppercase tracking-wider text-slate-900">
+            3. Actionable Workforce Planning Advice
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {insights.slice(0, 4).map((ins, idx) => (
-              <div key={idx} className="p-4 bg-slate-50/70 border border-slate-200 rounded-xl space-y-2">
+              <div key={idx} className="p-3.5 border border-slate-200 rounded-md space-y-1.5">
                 <div className="flex items-center gap-2">
-                  <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-indigo-100 text-indigo-700">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
                     {ins.insightType.replace('_', ' ')}
                   </span>
-                  <h4 className="text-xs font-bold text-slate-900">{ins.title}</h4>
                 </div>
+                <h4 className="font-bold text-slate-900">{ins.title}</h4>
                 <p className="text-[11px] text-slate-600 leading-relaxed">{ins.description}</p>
-                <div className="space-y-1 pt-1">
+                <div className="pt-1">
                   {ins.actionableRecommendations.slice(0, 1).map((rec, rIdx) => (
                     <div key={rIdx} className="flex items-start gap-1.5 text-[11px] text-slate-800">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 flex-shrink-0 mt-0.5" />
                       <span>{rec}</span>
                     </div>
                   ))}
@@ -267,10 +262,10 @@ export default function ReportsPage() {
           </div>
         </div>
 
-        {/* Report Footer */}
-        <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400">
-          <span>TalentPulse AI Enterprise Analytics &bull; Confidential Internal Report</span>
-          <span>End of Report</span>
+        {/* Document Footer */}
+        <div className="pt-6 border-t border-slate-200 flex items-center justify-between text-[11px] text-slate-400">
+          <span>TalentPulse AI Enterprise Analytics &bull; Confidential Executive Briefing</span>
+          <span>End of Document</span>
         </div>
       </div>
     </div>

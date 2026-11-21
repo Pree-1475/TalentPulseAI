@@ -1,19 +1,13 @@
 'use client';
 
-import React, { useEffect, useState, useTransition } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import {
   Search,
-  Filter,
   TrendingUp,
   TrendingDown,
   Minus,
-  Sparkles,
-  Building2,
-  Briefcase,
-  Layers,
   ChevronRight,
-  SlidersHorizontal,
 } from 'lucide-react';
 import { SkillDemandAnalysis, SkillCategory } from '@/types';
 import { SkillDetailModal } from '@/components/SkillDetailModal';
@@ -87,26 +81,26 @@ function SkillExplorerContent() {
   return (
     <div className="space-y-6">
       {/* Title */}
-      <div>
+      <div className="pb-4 border-b border-slate-200">
         <h1 className="text-2xl font-bold tracking-tight text-slate-900">
           Interactive Skill Explorer
         </h1>
-        <p className="text-xs text-slate-500 mt-1">
-          Search, filter, and inspect granular market metrics across all recognized technical and behavioral competencies.
+        <p className="text-xs text-slate-500 mt-1 max-w-2xl">
+          Search, filter, and inspect market metrics across all recognized technical and behavioral competencies.
         </p>
       </div>
 
-      {/* Search and Filters Bar */}
-      <div className="bg-white p-4 border border-slate-200/80 rounded-xl shadow-sm space-y-3">
+      {/* Filter Toolbar */}
+      <div className="space-y-3 text-xs">
         <div className="flex flex-col md:flex-row items-center gap-3">
           <div className="relative flex-1 w-full">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+            <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search by skill name, related role (e.g. PyTorch, Cloud Architect, Payments)..."
-              className="w-full pl-9 pr-4 py-2 text-xs bg-slate-50 border border-slate-200 rounded-lg text-slate-800 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+              className="w-full pl-8 pr-3 py-1.5 bg-slate-50/70 hover:bg-slate-50 border border-slate-200 rounded-md text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
             />
           </div>
 
@@ -114,9 +108,9 @@ function SkillExplorerContent() {
             <select
               value={selectedIndustry}
               onChange={(e) => setSelectedIndustry(e.target.value)}
-              className="text-xs bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-700 focus:outline-none w-full md:w-44"
+              className="bg-white border border-slate-200 rounded-md px-2.5 py-1.5 text-slate-700 focus:outline-none focus:border-blue-500 w-full md:w-40"
             >
-              <option value="All">All Industries</option>
+              <option value="All">All Sectors</option>
               {INDUSTRIES.filter((i) => i !== 'All').map((ind) => (
                 <option key={ind} value={ind}>
                   {ind}
@@ -127,9 +121,9 @@ function SkillExplorerContent() {
             <select
               value={selectedClassification}
               onChange={(e) => setSelectedClassification(e.target.value)}
-              className="text-xs bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-700 focus:outline-none w-full md:w-40"
+              className="bg-white border border-slate-200 rounded-md px-2.5 py-1.5 text-slate-700 focus:outline-none focus:border-blue-500 w-full md:w-36"
             >
-              <option value="All">All Momentum</option>
+              <option value="All">All Velocity</option>
               <option value="Rising">Rising Only</option>
               <option value="Stable">Stable Only</option>
               <option value="Declining">Declining Only</option>
@@ -137,16 +131,16 @@ function SkillExplorerContent() {
           </div>
         </div>
 
-        {/* Category Pills */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 pt-1 text-xs">
+        {/* Category Tabs */}
+        <div className="flex items-center gap-1 overflow-x-auto pb-1 text-[11px]">
           {CATEGORIES.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-3 py-1.5 rounded-lg whitespace-nowrap text-[11px] font-medium transition-colors ${
+              className={`px-2.5 py-1 rounded-md whitespace-nowrap transition-colors font-medium ${
                 selectedCategory === cat
-                  ? 'bg-indigo-600 text-white shadow-2xs'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                  ? 'bg-slate-900 text-white font-semibold'
+                  : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
               }`}
             >
               {cat}
@@ -155,10 +149,10 @@ function SkillExplorerContent() {
         </div>
       </div>
 
-      {/* Results Count */}
-      <div className="flex items-center justify-between text-xs text-slate-500 px-1">
+      {/* Results Header */}
+      <div className="flex items-center justify-between text-xs text-slate-400">
         <span>
-          Showing <strong>{filteredSkills.length}</strong> competencies matching criteria
+          Showing <strong className="text-slate-700">{filteredSkills.length}</strong> competencies
         </span>
         {(search || selectedCategory !== 'All' || selectedIndustry !== 'All' || selectedClassification !== 'All') && (
           <button
@@ -168,86 +162,82 @@ function SkillExplorerContent() {
               setSelectedIndustry('All');
               setSelectedClassification('All');
             }}
-            className="text-indigo-600 hover:text-indigo-800 font-medium"
+            className="text-blue-600 hover:text-blue-800 font-medium"
           >
-            Clear All Filters
+            Clear Filters
           </button>
         )}
       </div>
 
-      {/* Grid of Skill Cards */}
+      {/* High-Density Grid */}
       {loading ? (
-        <div className="p-12 text-center text-xs text-slate-400">Loading skill catalog...</div>
+        <div className="p-12 text-center text-xs text-slate-400">Loading catalog...</div>
       ) : filteredSkills.length === 0 ? (
-        <div className="p-12 bg-white border border-slate-200 rounded-xl text-center">
-          <p className="text-sm font-semibold text-slate-700">No skills match the selected filters</p>
-          <p className="text-xs text-slate-400 mt-1">Try resetting search keywords or categories.</p>
+        <div className="p-12 border border-slate-200 rounded-md text-center text-xs text-slate-500">
+          No competencies match the selected criteria.
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {filteredSkills.map((sk) => (
             <div
               key={sk.skillId}
               onClick={() => setSelectedSkillId(sk.skillId)}
-              className="p-5 bg-white border border-slate-200/80 rounded-xl shadow-sm hover:border-indigo-300 hover:shadow-md cursor-pointer transition-all flex flex-col justify-between group"
+              className="p-4 border border-slate-200 hover:border-blue-400 rounded-md bg-white hover:bg-slate-50/50 cursor-pointer transition-colors flex flex-col justify-between group text-xs"
             >
               <div>
-                <div className="flex items-start justify-between gap-2 mb-2">
-                  <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-600">
+                <div className="flex items-start justify-between gap-2 mb-1.5">
+                  <span className="text-[10px] text-slate-400 font-medium uppercase tracking-wider">
                     {sk.category}
                   </span>
 
                   <span
-                    className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold ${
+                    className={`inline-flex items-center gap-1 text-[11px] font-medium ${
                       sk.classification === 'Rising'
-                        ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                        ? 'text-emerald-700 font-semibold'
                         : sk.classification === 'Declining'
-                        ? 'bg-rose-50 text-rose-700 border border-rose-200'
-                        : 'bg-blue-50 text-blue-700 border border-blue-200'
+                        ? 'text-rose-700 font-semibold'
+                        : 'text-slate-500'
                     }`}
                   >
-                    {sk.classification === 'Rising' && <TrendingUp className="w-3 h-3" />}
-                    {sk.classification === 'Declining' && <TrendingDown className="w-3 h-3" />}
-                    {sk.classification === 'Stable' && <Minus className="w-3 h-3" />}
-                    {sk.classification}
+                    {sk.classification === 'Rising' && <TrendingUp className="w-3 h-3 text-emerald-600" />}
+                    {sk.classification === 'Declining' && <TrendingDown className="w-3 h-3 text-rose-600" />}
+                    {sk.classification === 'Stable' && <Minus className="w-3 h-3 text-slate-400" />}
+                    <span>{sk.classification}</span>
                   </span>
                 </div>
 
-                <h3 className="text-base font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                <h3 className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                   {sk.skillName}
                 </h3>
 
-                <p className="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                <p className="text-slate-500 text-[11px] mt-1.5 line-clamp-2 leading-relaxed">
                   {sk.aiInsight}
                 </p>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
-                <div>
-                  <span className="text-[10px] text-slate-400 uppercase font-semibold">Demand Share</span>
-                  <div className="text-sm font-bold text-slate-900 mt-0.5">
-                    {sk.currentDemandPct.toFixed(1)}%
+              <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px]">
+                <div className="flex items-center gap-3 tabular-nums">
+                  <div>
+                    <span className="text-slate-400 block text-[10px]">Demand</span>
+                    <span className="font-semibold text-slate-800">{sk.currentDemandPct.toFixed(1)}%</span>
+                  </div>
+                  <div>
+                    <span className="text-slate-400 block text-[10px]">Velocity</span>
+                    <span
+                      className={`font-semibold ${
+                        sk.pctChange > 0
+                          ? 'text-emerald-700'
+                          : sk.pctChange < 0
+                          ? 'text-rose-700'
+                          : 'text-slate-700'
+                      }`}
+                    >
+                      {sk.pctChange >= 0 ? `+${sk.pctChange.toFixed(1)}%` : `${sk.pctChange.toFixed(1)}%`}
+                    </span>
                   </div>
                 </div>
 
-                <div className="text-right">
-                  <span className="text-[10px] text-slate-400 uppercase font-semibold">Period &Delta;%</span>
-                  <div
-                    className={`text-sm font-bold mt-0.5 ${
-                      sk.pctChange > 0
-                        ? 'text-emerald-600'
-                        : sk.pctChange < 0
-                        ? 'text-rose-600'
-                        : 'text-slate-700'
-                    }`}
-                  >
-                    {sk.pctChange >= 0 ? `+${sk.pctChange.toFixed(1)}%` : `${sk.pctChange.toFixed(1)}%`}
-                  </div>
-                </div>
-
-                <div className="p-1.5 rounded-lg bg-slate-50 group-hover:bg-indigo-50 text-slate-400 group-hover:text-indigo-600 transition-colors">
-                  <ChevronRight className="w-4 h-4" />
-                </div>
+                <ChevronRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-blue-600 transition-colors" />
               </div>
             </div>
           ))}

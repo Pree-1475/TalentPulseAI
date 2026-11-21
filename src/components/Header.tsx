@@ -1,25 +1,18 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import {
   Search,
-  Bell,
-  RefreshCw,
-  Database,
-  Flame,
-  Cpu,
-  CheckCircle2,
-  AlertTriangle,
   RotateCcw,
+  Menu,
 } from 'lucide-react';
 
 interface HeaderProps {
-  onSearch?: (query: string) => void;
+  onOpenMobileMenu?: () => void;
 }
 
-export function Header({ onSearch }: HeaderProps) {
+export function Header({ onOpenMobileMenu }: HeaderProps) {
   const router = useRouter();
   const [searchVal, setSearchVal] = useState('');
   const [status, setStatus] = useState<{
@@ -72,64 +65,97 @@ export function Header({ onSearch }: HeaderProps) {
   };
 
   return (
-    <header className="h-16 bg-white border-b border-slate-200 sticky top-0 z-20 px-6 flex items-center justify-between">
-      {/* Search Input */}
-      <form onSubmit={handleSearchSubmit} className="relative w-72 md:w-96">
-        <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
-        <input
-          type="text"
-          value={searchVal}
-          onChange={(e) => setSearchVal(e.target.value)}
-          placeholder="Search skills, languages, frameworks (e.g. Python, AWS)..."
-          className="w-full pl-9 pr-4 py-2 text-xs bg-slate-50 border border-slate-200 rounded-lg text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
-        />
-      </form>
+    <header className="h-14 bg-white border-b border-slate-200 sticky top-0 z-20 px-4 sm:px-6 flex items-center justify-between">
+      {/* Mobile Menu & Search Input */}
+      <div className="flex items-center gap-3 flex-1 max-w-xl">
+        <button
+          onClick={onOpenMobileMenu}
+          className="lg:hidden p-1.5 rounded-md hover:bg-slate-100 text-slate-500 hover:text-slate-800 transition-colors"
+          aria-label="Open mobile navigation menu"
+        >
+          <Menu className="w-5 h-5" />
+        </button>
 
-      {/* Integration Badges & Actions */}
+        <form onSubmit={handleSearchSubmit} className="relative w-full max-w-sm">
+          <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2" />
+          <input
+            type="text"
+            value={searchVal}
+            onChange={(e) => setSearchVal(e.target.value)}
+            placeholder="Search skills, languages, frameworks (e.g. Python, AWS)..."
+            className="w-full pl-8 pr-3 py-1.5 text-xs bg-slate-50/70 hover:bg-slate-50 border border-slate-200 rounded-md text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+          />
+        </form>
+      </div>
+
+      {/* Integration Badges & Controls */}
       <div className="flex items-center gap-3">
-        {/* Status Indicators Pill */}
-        <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-600">
-          <div className="flex items-center gap-1.5" title={status.mongodbConnected ? 'MongoDB Atlas Connected' : 'Local Persistent Storage Active'}>
-            <Database className={`w-3.5 h-3.5 ${status.mongodbConnected ? 'text-emerald-600' : 'text-slate-400'}`} />
-            <span className="text-[11px]">{status.mongodbConnected ? 'Atlas DB' : 'Local Store'}</span>
+        {/* Compact Status Indicators (Restrained Text + Status Dot) */}
+        <div className="hidden md:flex items-center gap-3 text-xs text-slate-500 font-medium">
+          {/* Storage Status */}
+          <div className="flex items-center gap-1.5" title={status.mongodbConnected ? 'Connected to MongoDB Atlas' : 'Local Persistent Storage Mode'}>
+            <span
+              className={`w-1.5 h-1.5 rounded-full ${
+                status.mongodbConnected ? 'bg-emerald-500' : 'bg-slate-400'
+              }`}
+            />
+            <span className="text-[11px] text-slate-600">
+              {status.mongodbConnected ? 'Atlas DB' : 'Local Store'}
+            </span>
           </div>
 
-          <span className="text-slate-300">|</span>
+          <span className="text-slate-200">/</span>
 
-          <div className="flex items-center gap-1.5" title={status.firecrawlConfigured ? 'Firecrawl API Active' : 'Firecrawl Demo Simulation'}>
-            <Flame className={`w-3.5 h-3.5 ${status.firecrawlConfigured ? 'text-amber-500' : 'text-slate-400'}`} />
-            <span className="text-[11px]">{status.firecrawlConfigured ? 'Firecrawl' : 'Crawl Demo'}</span>
+          {/* Crawler Status */}
+          <div className="flex items-center gap-1.5" title={status.firecrawlConfigured ? 'Firecrawl API Active' : 'Demo Crawler Simulation Mode'}>
+            <span
+              className={`w-1.5 h-1.5 rounded-full ${
+                status.firecrawlConfigured ? 'bg-emerald-500' : 'bg-blue-400'
+              }`}
+            />
+            <span className="text-[11px] text-slate-600">
+              {status.firecrawlConfigured ? 'Firecrawl' : 'Crawl Demo'}
+            </span>
           </div>
 
-          <span className="text-slate-300">|</span>
+          <span className="text-slate-200">/</span>
 
-          <div className="flex items-center gap-1.5" title={`LLM Engine: ${status.llmProvider}`}>
-            <Cpu className={`w-3.5 h-3.5 ${status.llmConfigured ? 'text-indigo-600' : 'text-slate-400'}`} />
-            <span className="text-[11px]">
-              {status.llmProvider === 'gemini' ? 'Gemini AI' : status.llmProvider === 'openai' ? 'OpenAI' : 'NLP Engine'}
+          {/* AI Status */}
+          <div className="flex items-center gap-1.5" title={`Skill Normalization Engine: ${status.llmProvider}`}>
+            <span
+              className={`w-1.5 h-1.5 rounded-full ${
+                status.llmConfigured ? 'bg-emerald-500' : 'bg-slate-400'
+              }`}
+            />
+            <span className="text-[11px] text-slate-600">
+              {status.llmProvider === 'gemini'
+                ? 'Gemini AI'
+                : status.llmProvider === 'openai'
+                ? 'OpenAI'
+                : 'NLP Engine'}
             </span>
           </div>
         </div>
 
-        {/* Reseed Button */}
+        {/* Reset Baseline Action */}
         <button
           onClick={handleResetData}
           disabled={isResetting}
-          className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-600 hover:text-slate-900 bg-white hover:bg-slate-50 border border-slate-200 rounded-lg shadow-sm transition-colors disabled:opacity-50"
-          title="Reset database to baseline records"
+          className="flex items-center gap-1 px-2.5 py-1 text-xs text-slate-600 hover:text-slate-900 bg-white hover:bg-slate-50 border border-slate-200 rounded-md transition-colors disabled:opacity-50"
+          title="Reset database to default baseline dataset"
         >
-          <RotateCcw className={`w-3.5 h-3.5 text-slate-500 ${isResetting ? 'animate-spin' : ''}`} />
-          <span className="hidden sm:inline">Reset Baseline</span>
+          <RotateCcw className={`w-3 h-3 text-slate-400 ${isResetting ? 'animate-spin' : ''}`} />
+          <span className="hidden sm:inline text-[11px] font-medium">Reset Baseline</span>
         </button>
 
-        {/* User Profile / Organization */}
+        {/* User Workspace Profile */}
         <div className="flex items-center gap-2 pl-2 border-l border-slate-200">
-          <div className="w-8 h-8 rounded-full bg-slate-900 text-white font-medium text-xs flex items-center justify-center">
+          <div className="w-6 h-6 rounded bg-slate-900 text-white font-semibold text-[10px] flex items-center justify-center tracking-tight">
             HR
           </div>
           <div className="hidden sm:flex flex-col">
             <span className="text-xs font-semibold text-slate-900 leading-tight">Talent Ops</span>
-            <span className="text-[10px] text-slate-500">Enterprise Workspace</span>
+            <span className="text-[10px] text-slate-400">Enterprise</span>
           </div>
         </div>
       </div>
