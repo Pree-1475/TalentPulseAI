@@ -71,29 +71,37 @@ export function Header({ onOpenMobileMenu }: HeaderProps) {
   return (
     <header className="h-14 bg-white border-b border-slate-200 sticky top-0 z-20 px-4 sm:px-6 flex items-center justify-between">
       {/* Mobile Menu & Search Input */}
-      <div className="flex items-center gap-3 flex-1 max-w-xl">
+      <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0 max-w-xl">
         <button
           onClick={onOpenMobileMenu}
-          className="lg:hidden p-1.5 rounded-md hover:bg-slate-100 text-slate-500 hover:text-slate-800 transition-colors"
+          className="lg:hidden p-2 -ml-1 rounded-md hover:bg-slate-100 text-slate-600 hover:text-slate-900 transition-colors"
           aria-label="Open mobile navigation menu"
         >
           <Menu className="w-5 h-5" />
         </button>
 
-        <form onSubmit={handleSearchSubmit} className="relative w-full max-w-sm">
+        <form onSubmit={handleSearchSubmit} className="relative w-full max-w-[180px] xs:max-w-[220px] sm:max-w-sm">
           <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             value={searchVal}
             onChange={(e) => setSearchVal(e.target.value)}
-            placeholder="Search skills, languages, frameworks (e.g. Python, AWS)..."
-            className="w-full pl-8 pr-3 py-1.5 text-xs bg-slate-50/70 hover:bg-slate-50 border border-slate-200 rounded-md text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+            placeholder="Search skills..."
+            className="w-full pl-8 pr-2.5 py-1.5 text-xs bg-slate-50/70 hover:bg-slate-50 border border-slate-200 rounded-md text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all truncate"
           />
         </form>
       </div>
 
       {/* Integration Badges & Controls */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
+        {/* Mobile Compact Status Pill */}
+        <div
+          className="flex md:hidden items-center gap-1.5 px-2 py-1 bg-slate-50 border border-slate-200 rounded-md text-[10px] text-slate-600 font-medium whitespace-nowrap cursor-default"
+          title={`Memento Store: Active (${status.mementoProvider || 'Engine'})`}
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+          <span>{status.mementoProvider === 'momento-cloud' ? 'Momento' : 'Memento'}</span>
+        </div>
         {/* Compact Status Indicators (Restrained Text + Status Dot) */}
         <div className="hidden md:flex items-center gap-3 text-xs text-slate-500 font-medium">
           {/* Memento Historical Trend Store Status */}

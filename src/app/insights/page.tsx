@@ -67,9 +67,9 @@ export default function InsightsPage() {
   return (
     <div className="space-y-6">
       {/* Title & Action */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-4 border-b border-slate-200">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-slate-900">
+          <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900">
             AI Strategic Workforce Insights
           </h1>
           <p className="text-xs text-slate-500 mt-1 max-w-2xl">
@@ -80,7 +80,7 @@ export default function InsightsPage() {
         <button
           onClick={() => fetchInsights(true)}
           disabled={refreshing}
-          className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-xs font-semibold shadow-2xs transition-colors disabled:opacity-50"
+          className="w-full sm:w-auto flex items-center justify-center gap-1.5 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-xs font-semibold shadow-2xs transition-colors disabled:opacity-50"
         >
           <RefreshCw className={`w-3.5 h-3.5 ${refreshing ? 'animate-spin' : ''}`} />
           <span>Regenerate Insights</span>
@@ -88,7 +88,7 @@ export default function InsightsPage() {
       </div>
 
       {/* Filter Tabs */}
-      <div className="flex items-center gap-2 overflow-x-auto pb-1 text-xs">
+      <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-1.5 -mx-4 px-4 sm:mx-0 sm:px-0 text-xs">
         {[
           { id: 'all', label: 'All Findings' },
           { id: 'emerging', label: 'Emerging Skills' },

@@ -72,15 +72,15 @@ export function SkillDetailModal({ skillId, onClose }: SkillDetailModalProps) {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Drawer Header */}
-        <div className="p-6 border-b border-slate-200 flex items-start justify-between bg-white">
+        <div className="p-4 sm:p-6 border-b border-slate-200 flex items-start justify-between bg-white">
           <div>
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
+            <div className="flex items-center gap-2 mb-1 sm:mb-2">
+              <span className="text-[10px] sm:text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
                 {data?.category || 'Skill Competency'}
               </span>
               {data && (
                 <span
-                  className={`text-[11px] font-medium flex items-center gap-1 ${
+                  className={`text-[10px] sm:text-[11px] font-medium flex items-center gap-1 ${
                     data.classification === 'Rising'
                       ? 'text-emerald-700 font-semibold'
                       : data.classification === 'Declining'
@@ -96,14 +96,14 @@ export function SkillDetailModal({ skillId, onClose }: SkillDetailModalProps) {
                 </span>
               )}
             </div>
-            <h2 className="text-xl font-bold text-slate-900 tracking-tight">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">
               {data?.skillName || 'Loading skill details...'}
             </h2>
           </div>
 
           <button
             onClick={onClose}
-            className="p-1.5 rounded hover:bg-slate-100 text-slate-400 hover:text-slate-700 transition-colors"
+            className="p-2 -mr-1 rounded hover:bg-slate-100 text-slate-400 hover:text-slate-700 transition-colors"
             aria-label="Close skill details"
           >
             <X className="w-5 h-5" />
@@ -116,25 +116,25 @@ export function SkillDetailModal({ skillId, onClose }: SkillDetailModalProps) {
             <div className="w-6 h-6 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" />
           </div>
         ) : (
-          <div className="flex-1 p-6 space-y-6 overflow-y-auto">
+          <div className="flex-1 p-4 sm:p-6 space-y-6 overflow-y-auto">
             {/* Open KPI Metric Row */}
             <div className="grid grid-cols-3 divide-x divide-slate-200 py-3 border-y border-slate-200 text-center">
-              <div className="px-3">
-                <span className="text-[11px] text-slate-500 font-medium uppercase tracking-wider">
+              <div className="px-1.5 sm:px-3">
+                <span className="text-[10px] sm:text-[11px] text-slate-500 font-medium uppercase tracking-wider">
                   Market Share
                 </span>
-                <div className="text-2xl font-bold text-slate-900 mt-0.5 tabular-nums">
+                <div className="text-lg sm:text-2xl font-bold text-slate-900 mt-0.5 tabular-nums">
                   {data.currentDemandPct.toFixed(1)}%
                 </div>
-                <span className="text-[10px] text-slate-400">of active postings</span>
+                <span className="text-[9px] sm:text-[10px] text-slate-400">of active postings</span>
               </div>
 
-              <div className="px-3">
-                <span className="text-[11px] text-slate-500 font-medium uppercase tracking-wider">
-                  Period Velocity
+              <div className="px-1.5 sm:px-3">
+                <span className="text-[10px] sm:text-[11px] text-slate-500 font-medium uppercase tracking-wider">
+                  Velocity
                 </span>
                 <div
-                  className={`text-2xl font-bold mt-0.5 tabular-nums ${
+                  className={`text-lg sm:text-2xl font-bold mt-0.5 tabular-nums ${
                     data.pctChange > 0
                       ? 'text-emerald-700'
                       : data.pctChange < 0
@@ -144,17 +144,17 @@ export function SkillDetailModal({ skillId, onClose }: SkillDetailModalProps) {
                 >
                   {data.pctChange >= 0 ? `+${data.pctChange.toFixed(1)}%` : `${data.pctChange.toFixed(1)}%`}
                 </div>
-                <span className="text-[10px] text-slate-400">vs previous period</span>
+                <span className="text-[9px] sm:text-[10px] text-slate-400">vs prev period</span>
               </div>
 
-              <div className="px-3">
-                <span className="text-[11px] text-slate-500 font-medium uppercase tracking-wider">
-                  Verified Mentions
+              <div className="px-1.5 sm:px-3">
+                <span className="text-[10px] sm:text-[11px] text-slate-500 font-medium uppercase tracking-wider">
+                  Mentions
                 </span>
-                <div className="text-2xl font-bold text-slate-900 mt-0.5 tabular-nums">
+                <div className="text-lg sm:text-2xl font-bold text-slate-900 mt-0.5 tabular-nums">
                   {data.currentMentions}
                 </div>
-                <span className="text-[10px] text-slate-400">in tracked postings</span>
+                <span className="text-[9px] sm:text-[10px] text-slate-400">in tracked jobs</span>
               </div>
             </div>
 

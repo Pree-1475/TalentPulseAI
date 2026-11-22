@@ -24,16 +24,16 @@ export function StatusBanner({ isDemoMode = false }: StatusBannerProps) {
       </div>
 
       {/* Primary & Secondary Actions */}
-      <div className="flex items-center gap-2 self-end sm:self-auto">
+      <div className="flex items-center gap-2 w-full sm:w-auto justify-between sm:justify-end pt-1 sm:pt-0">
         <Link
           href="/sources"
-          className="text-xs font-medium text-slate-700 hover:text-slate-900 px-3 py-1.5 rounded-md hover:bg-slate-100 transition-colors"
+          className="text-xs font-medium text-slate-700 hover:text-slate-900 px-3 py-1.5 rounded-md hover:bg-slate-100 transition-colors text-center flex-1 sm:flex-initial border border-slate-200 sm:border-transparent"
         >
           Add Career URL
         </Link>
         <Link
           href="/reports"
-          className="text-xs font-medium text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded-md transition-colors flex items-center gap-1 shadow-2xs"
+          className="text-xs font-medium text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded-md transition-colors flex items-center justify-center gap-1 shadow-2xs flex-1 sm:flex-initial"
         >
           <span>Export Report</span>
           <ArrowRight className="w-3.5 h-3.5" />

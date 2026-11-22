@@ -111,7 +111,7 @@ export default function IntelligencePage() {
       </div>
 
       {/* Open Segmented Filter Tabs */}
-      <div className="flex items-center gap-6 border-b border-slate-200 text-xs">
+      <div className="flex items-center gap-4 sm:gap-6 border-b border-slate-200 text-xs overflow-x-auto pb-1 -mx-4 px-4 sm:mx-0 sm:px-0">
         {[
           { id: 'All', label: 'All Monitored Skills', count: analyses.length },
           { id: 'Rising', label: 'Rising Skills', count: risingCount, color: 'text-emerald-700' },
@@ -121,7 +121,7 @@ export default function IntelligencePage() {
           <button
             key={tab.id}
             onClick={() => setFilterClass(tab.id)}
-            className={`pb-3 font-medium transition-colors relative flex items-center gap-1.5 ${
+            className={`pb-2.5 font-medium transition-colors relative flex items-center gap-1.5 whitespace-nowrap flex-shrink-0 ${
               filterClass === tab.id
                 ? 'text-slate-900 font-semibold'
                 : 'text-slate-500 hover:text-slate-800'

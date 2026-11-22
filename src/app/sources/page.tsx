@@ -153,9 +153,9 @@ export default function SourcesPage() {
   return (
     <div className="space-y-6">
       {/* Page Title & Actions */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-4 border-b border-slate-200">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-slate-900">
+          <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900">
             Job Market Data Collection
           </h1>
           <p className="text-xs text-slate-500 mt-1 max-w-2xl">
@@ -165,7 +165,7 @@ export default function SourcesPage() {
 
         <button
           onClick={() => setShowAddModal(true)}
-          className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-xs font-semibold shadow-2xs transition-colors"
+          className="w-full sm:w-auto flex items-center justify-center gap-1.5 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-xs font-semibold shadow-2xs transition-colors"
         >
           <Plus className="w-3.5 h-3.5" />
           <span>Add Career URL</span>
@@ -458,9 +458,9 @@ export default function SourcesPage() {
             </div>
 
             {/* Split View */}
-            <div className="flex-1 flex overflow-hidden">
+            <div className="flex-1 flex flex-col md:flex-row overflow-y-auto md:overflow-hidden">
               {/* Job List */}
-              <div className="w-1/3 border-r border-slate-200 overflow-y-auto divide-y divide-slate-100 text-xs">
+              <div className="w-full md:w-1/3 border-b md:border-b-0 md:border-r border-slate-200 max-h-52 md:max-h-none overflow-y-auto divide-y divide-slate-100 text-xs flex-shrink-0">
                 {loadingJobs ? (
                   <div className="p-6 text-center text-slate-400">Loading postings...</div>
                 ) : sourceJobs.length === 0 ? (
@@ -489,7 +489,7 @@ export default function SourcesPage() {
               </div>
 
               {/* Job Detail */}
-              <div className="w-2/3 p-6 overflow-y-auto space-y-4 text-xs">
+              <div className="w-full md:w-2/3 p-4 sm:p-6 overflow-y-auto space-y-4 text-xs">
                 {selectedJob ? (
                   <div className="space-y-4">
                     <div>

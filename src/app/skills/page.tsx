@@ -104,11 +104,11 @@ function SkillExplorerContent() {
             />
           </div>
 
-          <div className="flex items-center gap-2 w-full md:w-auto">
+          <div className="grid grid-cols-2 sm:flex sm:items-center gap-2 w-full md:w-auto">
             <select
               value={selectedIndustry}
               onChange={(e) => setSelectedIndustry(e.target.value)}
-              className="bg-white border border-slate-200 rounded-md px-2.5 py-1.5 text-slate-700 focus:outline-none focus:border-blue-500 w-full md:w-40"
+              className="bg-white border border-slate-200 rounded-md px-2.5 py-1.5 text-slate-700 focus:outline-none focus:border-blue-500 w-full sm:w-40"
             >
               <option value="All">All Sectors</option>
               {INDUSTRIES.filter((i) => i !== 'All').map((ind) => (
@@ -121,7 +121,7 @@ function SkillExplorerContent() {
             <select
               value={selectedClassification}
               onChange={(e) => setSelectedClassification(e.target.value)}
-              className="bg-white border border-slate-200 rounded-md px-2.5 py-1.5 text-slate-700 focus:outline-none focus:border-blue-500 w-full md:w-36"
+              className="bg-white border border-slate-200 rounded-md px-2.5 py-1.5 text-slate-700 focus:outline-none focus:border-blue-500 w-full sm:w-36"
             >
               <option value="All">All Velocity</option>
               <option value="Rising">Rising Only</option>
@@ -132,7 +132,7 @@ function SkillExplorerContent() {
         </div>
 
         {/* Category Tabs */}
-        <div className="flex items-center gap-1 overflow-x-auto pb-1 text-[11px]">
+        <div className="flex items-center gap-1 overflow-x-auto pb-1.5 -mx-4 px-4 sm:mx-0 sm:px-0 text-[11px]">
           {CATEGORIES.map((cat) => (
             <button
               key={cat}

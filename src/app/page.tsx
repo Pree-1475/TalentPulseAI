@@ -109,9 +109,9 @@ export default function DashboardPage() {
       <StatusBanner isDemoMode={data.isDemoMode} />
 
       {/* 2. Main Page Heading */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-slate-900">
+          <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900">
             Market Skill Demand Overview
           </h1>
           <p className="text-xs text-slate-500 mt-1 max-w-2xl">
@@ -119,18 +119,18 @@ export default function DashboardPage() {
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 w-full sm:w-auto">
           <button
             onClick={fetchMetrics}
             disabled={refreshing}
-            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium bg-white hover:bg-slate-50 border border-slate-200 rounded-md text-slate-700 transition-colors disabled:opacity-50"
+            className="flex-1 sm:flex-initial justify-center flex items-center gap-1.5 px-3 py-2 text-xs font-medium bg-white hover:bg-slate-50 border border-slate-200 rounded-md text-slate-700 transition-colors disabled:opacity-50"
           >
             <RefreshCw className={`w-3.5 h-3.5 text-slate-400 ${refreshing ? 'animate-spin' : ''}`} />
-            <span>Refresh Metrics</span>
+            <span>Refresh</span>
           </button>
           <Link
             href="/sources"
-            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors shadow-2xs"
+            className="flex-1 sm:flex-initial justify-center flex items-center gap-1.5 px-3 py-2 text-xs font-medium bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors shadow-2xs"
           >
             <span>Run New Crawl</span>
           </Link>
@@ -138,65 +138,65 @@ export default function DashboardPage() {
       </div>
 
       {/* 3. Open Horizontal KPI Metric Row (NO SEPARATE CARDS) */}
-      <div className="border-y border-slate-200 py-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 divide-y sm:divide-y-0 lg:divide-x divide-slate-200 gap-y-4 lg:gap-y-0">
+      <div className="border-y border-slate-200 py-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-0 lg:divide-x divide-slate-200">
         {/* Jobs Analyzed */}
-        <div className="px-4 first:pl-0">
-          <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
+        <div className="px-2 sm:px-4 lg:first:pl-0">
+          <span className="text-[10px] sm:text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
             Jobs Analyzed
           </span>
-          <div className="text-3xl font-bold text-slate-900 mt-1 tabular-nums">
+          <div className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1 tabular-nums">
             {data.totalJobsAnalyzed}
           </div>
-          <span className="text-[11px] text-slate-400 mt-0.5 block">Across 5 industry sectors</span>
+          <span className="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 block truncate">5 sectors</span>
         </div>
 
         {/* Unique Skills */}
-        <div className="px-4">
-          <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
+        <div className="px-2 sm:px-4">
+          <span className="text-[10px] sm:text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
             Unique Skills
           </span>
-          <div className="text-3xl font-bold text-slate-900 mt-1 tabular-nums">
+          <div className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1 tabular-nums">
             {data.uniqueSkillsIdentified}
           </div>
-          <span className="text-[11px] text-slate-400 mt-0.5 block">Canonical normalized taxonomy</span>
+          <span className="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 block truncate">Normalized taxonomy</span>
         </div>
 
         {/* Rising Skills */}
-        <div className="px-4">
-          <span className="text-[11px] font-semibold text-emerald-700 uppercase tracking-wider flex items-center gap-1">
-            <TrendingUp className="w-3.5 h-3.5 text-emerald-600" />
-            <span>Rising Skills</span>
+        <div className="px-2 sm:px-4">
+          <span className="text-[10px] sm:text-[11px] font-semibold text-emerald-700 uppercase tracking-wider flex items-center gap-1">
+            <TrendingUp className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" />
+            <span className="truncate">Rising</span>
           </span>
-          <div className="text-3xl font-bold text-emerald-700 mt-1 tabular-nums">
+          <div className="text-2xl sm:text-3xl font-bold text-emerald-700 mt-1 tabular-nums">
             {data.risingSkillsCount}
           </div>
-          <span className="text-[11px] text-emerald-700 font-medium mt-0.5 block">
-            &ge; +12% Demand Growth
+          <span className="text-[10px] sm:text-[11px] text-emerald-700 font-medium mt-0.5 block truncate">
+            &ge; +12% Demand
           </span>
         </div>
 
         {/* Stable Skills */}
-        <div className="px-4">
-          <span className="text-[11px] font-semibold text-slate-600 uppercase tracking-wider flex items-center gap-1">
-            <Minus className="w-3.5 h-3.5 text-slate-500" />
-            <span>Stable Skills</span>
+        <div className="px-2 sm:px-4">
+          <span className="text-[10px] sm:text-[11px] font-semibold text-slate-600 uppercase tracking-wider flex items-center gap-1">
+            <Minus className="w-3.5 h-3.5 text-slate-500 flex-shrink-0" />
+            <span className="truncate">Stable</span>
           </span>
-          <div className="text-3xl font-bold text-slate-800 mt-1 tabular-nums">
+          <div className="text-2xl sm:text-3xl font-bold text-slate-800 mt-1 tabular-nums">
             {data.stableSkillsCount}
           </div>
-          <span className="text-[11px] text-slate-500 mt-0.5 block">Consistent baseline share</span>
+          <span className="text-[10px] sm:text-[11px] text-slate-500 mt-0.5 block truncate">Consistent baseline</span>
         </div>
 
         {/* Declining Skills */}
-        <div className="px-4 last:pr-0">
-          <span className="text-[11px] font-semibold text-rose-700 uppercase tracking-wider flex items-center gap-1">
-            <TrendingDown className="w-3.5 h-3.5 text-rose-600" />
-            <span>Declining Skills</span>
+        <div className="px-2 sm:px-4 col-span-2 sm:col-span-1 lg:last:pr-0">
+          <span className="text-[10px] sm:text-[11px] font-semibold text-rose-700 uppercase tracking-wider flex items-center gap-1">
+            <TrendingDown className="w-3.5 h-3.5 text-rose-600 flex-shrink-0" />
+            <span className="truncate">Declining</span>
           </span>
-          <div className="text-3xl font-bold text-rose-700 mt-1 tabular-nums">
+          <div className="text-2xl sm:text-3xl font-bold text-rose-700 mt-1 tabular-nums">
             {data.decliningSkillsCount}
           </div>
-          <span className="text-[11px] text-rose-700 font-medium mt-0.5 block">
+          <span className="text-[10px] sm:text-[11px] text-rose-700 font-medium mt-0.5 block truncate">
             &le; -10% Contraction
           </span>
         </div>
