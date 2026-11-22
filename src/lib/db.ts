@@ -16,6 +16,7 @@ import {
   INITIAL_SNAPSHOTS,
   INITIAL_AI_INSIGHTS,
 } from './initial-data';
+import { getMementoStatus, getMementoSnapshots, saveMementoSnapshots } from './memento';
 
 // Database store interface
 interface DBStore {
@@ -157,6 +158,7 @@ export async function getSystemStatus() {
   const hasFirecrawl = Boolean(process.env.FIRECRAWL_API_KEY && process.env.FIRECRAWL_API_KEY.trim() !== '');
   const hasGemini = Boolean(process.env.GEMINI_API_KEY && process.env.GEMINI_API_KEY.trim() !== '');
   const hasOpenAI = Boolean(process.env.OPENAI_API_KEY && process.env.OPENAI_API_KEY.trim() !== '');
+  const mementoStatus = await getMementoStatus();
 
   let llmProvider: 'gemini' | 'openai' | 'heuristic_engine' = 'heuristic_engine';
   if (hasGemini) llmProvider = 'gemini';
@@ -167,6 +169,9 @@ export async function getSystemStatus() {
     firecrawlConfigured: hasFirecrawl,
     llmConfigured: hasGemini || hasOpenAI,
     llmProvider,
+    mementoConfigured: mementoStatus.connected,
+    mementoProvider: mementoStatus.provider,
+    mementoSnapshotCount: mementoStatus.snapshotCount,
   };
 }
 
@@ -389,41 +394,11 @@ export async function saveJobSkills(jobSkills: JobSkill[]): Promise<void> {
 }
 
 export async function getSnapshots(skillId?: string): Promise<SkillSnapshot[]> {
-  const db = await getMongoDb();
-  if (db) {
-    const query: any = skillId ? { skillId } : {};
-    const records = await db.collection<SkillSnapshot>('skill_snapshots').find(query).sort({ timePeriod: 1 }).toArray();
-    if (records.length > 0) return records;
-  }
-  const store = readLocalStore();
-  if (skillId) {
-    return store.snapshots.filter((s) => s.skillId === skillId);
-  }
-  return store.snapshots;
+  return getMementoSnapshots(skillId);
 }
 
 export async function saveSnapshots(snapshots: SkillSnapshot[]): Promise<void> {
-  if (snapshots.length === 0) return;
-  const db = await getMongoDb();
-  if (db) {
-    for (const snap of snapshots) {
-      await db.collection<SkillSnapshot>('skill_snapshots').updateOne(
-        { skillId: snap.skillId, timePeriod: snap.timePeriod },
-        { $set: snap },
-        { upsert: true }
-      );
-    }
-  }
-  const store = readLocalStore();
-  snapshots.forEach((newSnap) => {
-    const idx = store.snapshots.findIndex((s) => s.skillId === newSnap.skillId && s.timePeriod === newSnap.timePeriod);
-    if (idx >= 0) {
-      store.snapshots[idx] = newSnap;
-    } else {
-      store.snapshots.push(newSnap);
-    }
-  });
-  writeLocalStore(store);
+  return saveMementoSnapshots(snapshots);
 }
 
 export async function getAiInsights(): Promise<AiInsight[]> {

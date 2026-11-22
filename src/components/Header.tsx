@@ -20,11 +20,15 @@ export function Header({ onOpenMobileMenu }: HeaderProps) {
     firecrawlConfigured: boolean;
     llmConfigured: boolean;
     llmProvider: string;
+    mementoConfigured?: boolean;
+    mementoProvider?: string;
   }>({
     mongodbConnected: false,
     firecrawlConfigured: false,
     llmConfigured: false,
     llmProvider: 'heuristic_engine',
+    mementoConfigured: true,
+    mementoProvider: 'memento-engine',
   });
   const [isResetting, setIsResetting] = useState(false);
 
@@ -92,7 +96,21 @@ export function Header({ onOpenMobileMenu }: HeaderProps) {
       <div className="flex items-center gap-3">
         {/* Compact Status Indicators (Restrained Text + Status Dot) */}
         <div className="hidden md:flex items-center gap-3 text-xs text-slate-500 font-medium">
-          {/* Storage Status */}
+          {/* Memento Historical Trend Store Status */}
+          <div className="flex items-center gap-1.5" title={status.mementoProvider === 'momento-cloud' ? 'Momento Cloud Historical Store Active' : 'Memento Historical Trend Engine Active'}>
+            <span
+              className={`w-1.5 h-1.5 rounded-full ${
+                status.mementoConfigured ? 'bg-emerald-500' : 'bg-slate-400'
+              }`}
+            />
+            <span className="text-[11px] text-slate-600 font-medium">
+              {status.mementoProvider === 'momento-cloud' ? 'Momento Cloud' : 'Memento Store'}
+            </span>
+          </div>
+
+          <span className="text-slate-200">/</span>
+
+          {/* Database Layer */}
           <div className="flex items-center gap-1.5" title={status.mongodbConnected ? 'Connected to MongoDB Atlas' : 'Local Persistent Storage Mode'}>
             <span
               className={`w-1.5 h-1.5 rounded-full ${

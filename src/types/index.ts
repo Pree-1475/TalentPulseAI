@@ -190,5 +190,8 @@ export interface DashboardMetrics {
     firecrawlConfigured: boolean;
     llmConfigured: boolean;
     llmProvider: 'gemini' | 'openai' | 'heuristic_engine';
+    mementoConfigured: boolean;
+    mementoProvider: 'momento-cloud' | 'memento-engine';
+    mementoSnapshotCount: number;
   };
 }

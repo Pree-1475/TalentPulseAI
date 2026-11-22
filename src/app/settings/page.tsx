@@ -13,11 +13,17 @@ export default function SettingsPage() {
     firecrawlConfigured: boolean;
     llmConfigured: boolean;
     llmProvider: string;
+    mementoConfigured?: boolean;
+    mementoProvider?: string;
+    mementoSnapshotCount?: number;
   }>({
     mongodbConnected: false,
     firecrawlConfigured: false,
     llmConfigured: false,
     llmProvider: 'heuristic_engine',
+    mementoConfigured: true,
+    mementoProvider: 'memento-engine',
+    mementoSnapshotCount: 0,
   });
   const [loading, setLoading] = useState(true);
   const [resetting, setResetting] = useState(false);
@@ -90,6 +96,33 @@ export default function SettingsPage() {
         </h2>
 
         <div className="divide-y divide-slate-200 border border-slate-200 rounded-lg bg-white text-xs">
+          {/* Memento Historical Skill Trend Store */}
+          <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <div className="flex items-center gap-2 font-semibold text-slate-900">
+                <span
+                  className={`w-2 h-2 rounded-full ${
+                    status.mementoConfigured ? 'bg-emerald-500' : 'bg-slate-400'
+                  }`}
+                />
+                <span>
+                  Historical Trend Store:{' '}
+                  {status.mementoProvider === 'momento-cloud'
+                    ? 'Momento Cloud Serverless Cache'
+                    : 'Memento Snapshot Engine'}
+                </span>
+              </div>
+              <p className="text-slate-500 text-[11px] mt-1">
+                {status.mementoProvider === 'momento-cloud'
+                  ? 'Connected to Momento Cloud. Stores longitudinal skill snapshots (Q1–Q4) for demand velocity calculations.'
+                  : 'Operating in local Memento Engine mode. Preserves historical skill trend snapshots across time periods.'}
+              </p>
+            </div>
+            <span className="text-[11px] text-slate-500 font-medium">
+              {status.mementoProvider === 'momento-cloud' ? 'Momento Cloud Active' : 'Memento Engine Active'}
+            </span>
+          </div>
+
           {/* MongoDB Atlas */}
           <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div>
@@ -176,7 +209,10 @@ export default function SettingsPage() {
         </p>
 
         <div className="p-4 bg-slate-900 text-slate-200 rounded-md font-mono text-xs overflow-x-auto space-y-1">
-          <div><span className="text-slate-500"># MongoDB Atlas Connection URI</span></div>
+          <div><span className="text-slate-500"># Momento Cloud Auth Token (Optional - for Momento Cloud)</span></div>
+          <div>MOMENTO_AUTH_TOKEN=eyJhbGciOi...</div>
+          <div>MOMENTO_CACHE_NAME=talentpulse-memento</div>
+          <div className="pt-2"><span className="text-slate-500"># MongoDB Atlas Connection URI</span></div>
           <div>MONGODB_URI=mongodb+srv://&lt;user&gt;:&lt;password&gt;@cluster0.mongodb.net/talentpulse?retryWrites=true&amp;w=majority</div>
           <div className="pt-2"><span className="text-slate-500"># Firecrawl API Key (https://firecrawl.dev)</span></div>
           <div>FIRECRAWL_API_KEY=fc_live_...</div>

@@ -15,6 +15,7 @@
     "@/types": "./src/types/index.ts"
   },
   "dependencies": {
+    "@gomomento/sdk": "^1.119.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.441.0",
     "mongodb": "^6.8.0",
