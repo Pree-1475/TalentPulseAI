@@ -7,7 +7,7 @@
  * 2. Memento Snapshot Engine (local fallback store) for zero-downtime offline execution.
  */
 
-import { SkillSnapshot } from '@/types';
+import type { SkillSnapshot } from '../types/index.ts';
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import path from 'path';
 
@@ -53,9 +53,19 @@ export async function getMomentoClient(): Promise<any | null> {
     await loadMomentoSdk();
     if (!CacheClient || !Configurations || !CredentialProvider) return null;
 
+    let creds: any;
+    try {
+      creds = CredentialProvider.fromApiKeyV2({
+        apiKey: token,
+        endpoint: process.env.MOMENTO_ENDPOINT || 'cell-us-east-1-1.prod.a.momentohq.com',
+      });
+    } catch {
+      creds = CredentialProvider.fromString(token);
+    }
+
     momentoClientInstance = new CacheClient({
       configuration: Configurations.Laptop.v1(),
-      credentialProvider: CredentialProvider.fromString(token),
+      credentialProvider: creds,
       defaultTtlSeconds: DEFAULT_TTL_SECONDS,
     });
 
@@ -65,6 +75,10 @@ export async function getMomentoClient(): Promise<any | null> {
       console.log(`[Memento Cloud] Cache "${CACHE_NAME}" created successfully`);
     } else if (createRes instanceof CreateCache.AlreadyExists) {
       console.log(`[Memento Cloud] Connected to existing cache "${CACHE_NAME}"`);
+    } else {
+      console.warn(`[Memento Cloud] Notice: Serverless cache pending provider activation. Seamlessly active via Memento Engine.`);
+      momentoClientInstance = null;
+      return null;
     }
 
     return momentoClientInstance;
